@@ -1,0 +1,99 @@
+<% title(t('edit_profile', scope: 'common')) %>
+<h1><%= t('edit_profile', scope: 'common') %></h1>
+
+
+<%= render 'common/tutor_tabs' %>
+
+<div class="panel borderless-top panel-default">
+	<div class="panel-body">
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => "form", :multipart => true }) do |f| %>
+		<%= devise_error_messages! %>
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+		
+			<div class="form-group">
+			  <%= f.label :email %>
+			  <%= f.email_field :email, :autofocus => true, :class =>"form-control" %>
+		  </div>
+		
+		  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+		    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+		  <% end %>
+		  
+		  <div class="form-group">
+		  	<%= f.label :first_name %>
+		  	<%= f.text_field :first_name, :class =>"form-control" %>
+		  </div>
+		  
+		  <div class="form-group">
+		  	<%= f.label :last_name %>
+		 		<%= f.text_field :last_name, :class =>"form-control" %>
+		 	</div>
+		  
+		  
+			<div class="radio">
+				<label>
+					<%= f.radio_button :gender, "female" %>
+					<%= f.label :gender_female, t('gender_female', scope: 'activerecord.attributes.user') %>
+				</label>
+			</div>
+		  <div class="radio">
+			  <label>
+				  <%= f.radio_button :gender, "male" %>
+					<%= f.label :gender_male, t('gender_male', scope: 'activerecord.attributes.user') %>
+				</label>
+			</div>
+			
+			<div class="form-group">
+				<%= f.label :birthday %><br />
+				<%= f.text_field :birthday, :class =>"form-control" %>
+				Users must be aged 18 or over
+			</div>
+		
+			<div>
+				<%= f.label :time_zone %><br />
+				<%= f.time_zone_select :time_zone, nil, :model => I18nTimeZone, :include_blank => true %>
+			</div>
+		
+			<div>
+				<%= image_tag(resource.avatar_url, :class => "img-thumbnail") if resource.avatar? %>
+				<%= f.file_field :avatar %>
+				<%= f.hidden_field :avatar_cache %>
+			</div>
+			<br />
+			<div>
+				<%= f.label :remove_avatar, 'Remove profile picture'%>
+				<%= f.check_box :remove_avatar %>
+			</div>
+			<br />
+			
+		  <div class="form-group">
+			  <%= f.label :password %>
+			  <%= f.password_field :password, :autocomplete => "off", :class =>"form-control" %>
+			  <span class="help-block">(leave blank if you don't want to change it)</span>
+			</div>
+		
+		  <div class="form-group">
+		  	<%= f.label :password_confirmation %>
+		  	<%= f.password_field :password_confirmation, :class =>"form-control" %>
+		 	</div>
+		
+		  <div class="form-group">
+		  	<%= f.label :current_password %>
+		 		<%= f.password_field :current_password, :class =>"form-control" %>
+		 		<span class="help-block">(we need your current password to confirm your changes)</span>
+		 	</div>
+		
+		  <%= f.submit t('update', scope: 'devise.registrations.edit'), class: "btn btn-success" %>
+			</div><!-- end div col-md-6 -->
+		</div><!-- end div row -->
+		<% end %>
+	</div><!-- End Panel-body -->
+</div><!-- End Panel -->
+
+<hr />
+<div class="text-center alert alert-warning">
+	<h3><%= t('unhappy', scope: 'devise.registrations.edit') %></h3>
+	<%= button_to t('cancel_account', scope: 'devise.registrations.edit'), registration_path(resource_name), :data => { :confirm => t('globals.destroy_confirm') }, :method => :delete, :class => "btn btn-danger" %>
+	<br />
+</div>

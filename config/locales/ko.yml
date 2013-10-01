@@ -1,0 +1,53 @@
+ko:
+  website:
+    name: 카꾸지
+  language:
+    en: 영어
+    ch: 중국어
+    ja: 일본어
+    ko: 한국어
+  globals:
+    current_country: 현재에 살고있는 나라
+    destroy_confirm: 정말 삭제 하시겠습니까?
+  home:
+    index:
+      description: "%{website}의 소개"
+      jumbo_small: "세 가지 간단한 단계에서 학습 시작!"
+      step_1: "등록하고"
+      step_2: "튜터를 찾고"
+      step_3: "학습 시작!"
+    about:
+      title:  "%{website}에 대해"
+      description: "%{website}의 명세와 정보"
+  common:
+    list_tutors: 튜터 목록
+    edit_profile: 프로파일 편집
+    my_tutor_profile: 내 튜터 프로파일
+    edit_tutor_profile: 튜터 프로필 편집
+    become_a_tutor: 튜터된다
+    copyright: "%{website} © %{year_range}년. 판권 소유."
+    search:
+      placeholder: 사이트 검색
+      button: 검색
+  messages:
+    index:
+      title: 받은 편지
+    new:
+      title: 새 메시지
+      send: 전송
+      recipient: "%{user}님 에게"
+    show:
+      title: 대화
+  tutors:
+    index:
+      title: 튜터 목록
+      tutor_name: 튜터의 이름
+    new:
+      title: 튜터 등록
+    edit:
+      title: 튜터 프로파일 편집
+    show:
+      title: 내 튜터 프로파일
+  datetime:
+    distance_in_words:
+      ago: 전

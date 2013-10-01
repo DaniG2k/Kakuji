@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to t('website.name'), :root, class: "navbar-brand" %>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+    	<%= render 'common/nav_mail' %>
+      <%= render 'common/nav_languages' %>
+      <%= render 'common/nav_config' %>
+    </ul>
+    
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control input-sm" placeholder="<%= t 'placeholder', scope: 'common.search' %>">
+      </div>
+      <button type="submit" class="btn btn-info btn-sm"><%= t 'button', scope: 'common.search' %></button>
+    </form>
+    
+  </div><!-- /.navbar-collapse -->
+  </div>
+</nav>

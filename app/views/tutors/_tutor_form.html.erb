@@ -1,0 +1,52 @@
+<%= form_for(@tutor, html: { :role => "form" }) do |f| %>
+	<%= render "errors" %>
+	<div class="row">
+		<div class="col-sm-6 col-md-6">
+			<div class="form-group">
+				<%= f.label :description, t('description', scope: 'activerecord.attributes.tutor') %>
+				<%= f.text_area :description, class: "form-control" %><br />
+			</div>	
+			
+			<div class="form-group">
+				<%= f.label :rate, t('rate', scope: 'activerecord.attributes.tutor') %>
+				<%= f.text_field :rate, class: "form-control" %><br />
+			</div>
+				
+			<%= t('current_country', scope: 'globals') %>
+			<%= country_select(:tutor, :country) %><br />
+			
+			<div class="form-group">
+				<%= f.label :city %>
+				<%= f.text_field :city, class: "form-control" %><br />
+			</div>
+				
+			<div class="form-group">
+				<%= f.label :postalcode, 'Postal Code' %>
+				<%= f.text_field :postalcode, class: "form-control" %><br />
+			</div>
+				
+			<div class="form-group">
+				<%= f.label :street %>
+				<%= f.text_field :street, class: "form-control" %><br />
+			</div>
+			<%= f.hidden_field :address %>
+		</div><!-- end div col-md-6 -->
+	</div><!-- end div row -->
+		
+	<%= f.label :educational_experiences, t('education', scope: 'activerecord.attributes.tutor') %>	
+	<%= f.fields_for :educational_experiences do |builder| %>
+		<%= render 'educational_experience_fields', f: builder %>
+	<% end %>
+	<%= link_to_add_fields "Add field", f, :educational_experiences %>
+	<br />
+		
+	<%= f.label :languages, t('languages', scope: 'activerecord.attributes.tutor') %>	
+	<%= f.fields_for :languages do |builder| %>
+		<%= render 'language_fields', f: builder %>
+	<% end %>
+	
+	<%= link_to_add_fields "Add field", f, :languages %>
+	<br />
+	
+	<%= f.submit "Submit", class: "btn btn-success pull-left" %>
+<% end %>

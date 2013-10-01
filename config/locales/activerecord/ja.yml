@@ -1,0 +1,55 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      tutor: チューター
+      message: メッセージ
+    attributes:
+      user:
+        email: メール
+        password: パスワード
+        password_confirmation: パスワード確認
+        current_password: 現在のパスワード
+        first_name: ファーストネーム
+        last_name: ラストネーム
+        gender: 性
+        gender_male: 男性
+        gender_female: 女性
+        birthday: 生年月日
+        terms: 利用規約
+        time_zone: 時間帯
+      tutor:
+        country: 国籍
+        rate: 料金
+        description: 詳細情報
+        education: 教育
+        educational_experiences_attributes: 教育フィールド
+        languages: 言語
+      educational_experiences:
+        university: 大学
+        major: 専攻
+        minor: 副専攻
+      languages:
+        language: 言語
+        proficiency: 能力
+        level:
+          beginner: 下級
+          intermediate: 中級
+          advanced: 上級
+          native: 母語
+      message:
+        subject: 件名
+        body: メッセージ
+        sender: 差出人
+        recipient: 受信者
+        submitted: 送信日
+  errors:
+    educational_experiences_attributes:
+      too_many: が多すぎます。
+      no_university: で大学が入力されていません。
+      numeric: で数値のみが含まれています。
+    messages:
+      required: を入力してください。
+      too_young: は不適合です。若すぎるかもしれません。
+      too_old: は不適合です。
+      recipient_not_found: "申し訳ありません！そのユーザーが見つけられませんでした。:("

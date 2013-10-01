@@ -1,0 +1,53 @@
+ja:
+  website:
+    name: カクジ
+  language:
+    en: 英語
+    ch: 中国語
+    ja: 日本語
+    ko: 韓国語
+  globals:
+    current_country: 現在に住んでいる国
+    destroy_confirm: 本当に削除しても宜しいですか？
+  home:
+    index:
+      description: "%{website}の紹介"
+      jumbo_small: "三つの簡単ステップで学習スタート！"
+      step_1: 登録して
+      step_2: チューターを探して
+      step_3: 学習開始！
+    about:
+      title:  "%{website}について"
+      description: "%{website}の明細と情報"
+  common:
+    list_tutors: チューター・一覧
+    edit_profile: プロファイル編集
+    my_tutor_profile: 私のチューター・プロファイル
+    edit_tutor_profile: チューター・プロファイル編集
+    become_a_tutor: チューターになる
+    copyright: "%{website} ©　%{year_range}年。 無断複写·転載を禁じます。"
+    search:
+      placeholder: サイト内検索
+      button: 検索
+  messages:
+    index:
+      title: 受信トレイ
+    new:
+      title: 新規メッセージ
+      send: 送信
+      recipient: "%{user}さんへ"
+    show:
+      title: カンバセーション
+  tutors:
+    index:
+      title: チューター・一覧
+      tutor_name: チューター氏名
+    new:
+      title: チューター登録
+    edit:
+      title: チューター・プロフィール編集
+    show:
+      title: 私のチューター・プロフィール
+  datetime:
+    distance_in_words:
+      ago: 前

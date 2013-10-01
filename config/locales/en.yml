@@ -1,0 +1,76 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+# Basic locales: https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale
+
+en:
+  website:
+    name: Kakuji
+  language:
+    en: English
+    ch: Chinese
+    ja: Japanese
+    ko: Korean
+  globals:
+    current_country: Current country
+    destroy_confirm: Are you sure?
+  home:
+    index:
+      description: "Introduction to %{website}"
+      jumbo_small: "Start learning in 3 easy steps!"
+      step_1: Sign up
+      step_2: Find a tutor
+      step_3: Start learning
+    about:
+      title: "About %{website}"
+      description: "Some information about %{website}"
+  common:
+      list_tutors: List tutors
+      edit_profile: Edit profile
+      my_tutor_profile: My tutor profile
+      edit_tutor_profile: Edit tutor profile
+      become_a_tutor: Become a tutor
+      copyright: "%{website} © %{year_range}. All rights reserved."
+      search:
+        placeholder: Search
+        button: Submit
+  messages:
+    index:
+      title: Inbox
+    new:
+      title: New Message
+      send: Send
+      recipient: "to %{user}"
+    show:
+      title: Conversation
+  tutors:
+    index:
+      title: Tutors
+      tutor_name: Tutor Name
+    new:
+      title: Become a tutor
+    edit:
+      title: Edit tutor profile
+    show:
+      title: My tutor profile
+  datetime:
+    distance_in_words:
+      ago: ago

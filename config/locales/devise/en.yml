@@ -1,0 +1,15 @@
+en:
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+      edit:
+        update: "Update"
+        unhappy: "Unhappy??"
+        cancel_account: "Cancel my account"
+    sessions:
+      new:
+        sign_in: "Login"
+        remember: "Remember me"
+      destroy:
+        sign_out: "Logout"

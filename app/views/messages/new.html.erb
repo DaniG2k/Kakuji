@@ -1,0 +1,21 @@
+<% title t '.title' %>
+<h1><%= t '.title' %> <small><%= t('.recipient', user: @tutor.fullname) %></small></h1>
+
+<%= render "errors" %>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= form_for @message, url: messages_path(recipient_id: params[:recipient_id]), html: {role: "form"} do |f| %>
+		  <div class="form-group">
+		    <%= f.label :subject %><br>
+		    <%= f.text_field :subject, class: "form-control" %>
+		  </div>
+		 
+		  <div class="form-group">
+		    <%= f.label :body %><br>
+		    <%= f.text_area :body, class: "form-control", rows: 4 %>
+		  </div>
+		  <%= f.submit(t('.send'), :class => "btn btn-success") %>
+		<% end %>
+  </div>
+</div>

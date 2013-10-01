@@ -1,0 +1,15 @@
+ko:
+  devise:
+    registrations:
+      new:
+        sign_up: "등록"
+      edit:
+        update: "업데이트"
+        unhappy: "불행 있습니까??"
+        cancel_account: "계정 취소"
+    sessions:
+      new:
+        sign_in: "로그인"
+        remember: "메일 암호 저장"
+      destroy:
+        sign_out: "로그 아웃"

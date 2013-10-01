@@ -1,0 +1,15 @@
+ja:
+  devise:
+    registrations:
+      new:
+        sign_up: "登録"
+      edit:
+        update: "更新"
+        unhappy: "不満ですか？？"
+        cancel_account: "アカウント取消"
+    sessions:
+      new:
+        sign_in: "ログイン"
+        remember: "メール・パスワードの保存"
+      destroy:
+        sign_out: "ログアウト"

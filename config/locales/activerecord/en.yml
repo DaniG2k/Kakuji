@@ -1,0 +1,55 @@
+en:
+  activerecord:
+    models:
+      user: User
+      tutor: Tutor
+      message: Message
+    attributes:
+      user:
+        email: E-mail
+        password: Password
+        password_confirmation: Password confirmation
+        current_password: Current password
+        first_name: First name
+        last_name: Last name
+        gender: Gender
+        gender_male: Male
+        gender_female: Female
+        birthday: Birthday
+        terms: Terms
+        time_zone: Time zone
+      tutor:
+        country: Country
+        rate: Rate
+        description: Description
+        education: Education
+        educational_experiences_attributes: Educational experiences
+        languages_attributes: Languages
+      educational_experiences:
+        university: University
+        major: Major
+        minor: Minor
+      languages:
+        language: Language
+        proficiency: Proficiency
+        level:
+          beginner: Beginner
+          intermediate: Intermediate
+          advanced: Advanced
+          native: Native
+      message:
+        subject: Subject
+        body: Body
+        sender: Sender
+        recipient: Recipient
+        submitted: Submitted  
+  errors:
+    educational_experiences_attributes:
+      too_many: are more than necessary.
+      no_university: has a missing university field.
+      numeric: only contains numeric values.
+    messages:
+      required: can't be blank.
+      too_young: unaccepted. You may be a bit too young.
+      too_old: unaccepted. Aren't you a little old for this?
+      recipient_not_found: "Sorry! That recipient was not found :("

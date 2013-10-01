@@ -1,0 +1,11 @@
+<% title t '.title' %>
+<h1><%= t '.title' %></h1>
+
+<%= render 'common/tutor_tabs' %>
+
+<div class="panel borderless-top panel-default">
+	<div class="panel-body">
+		<%= render "tutor_form" %>
+		<%= button_to 'Delete tutor profile', tutor_path(@tutor), method: :delete, data: { confirm: "#{t('globals.destroy_confirm')}" }, class: "btn btn-danger pull-right" %>
+	</div><!-- End Panel-body -->
+</div><!-- End Panel -->

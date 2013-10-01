@@ -1,0 +1,40 @@
+<% title t '.title' %>
+<h1><%= t '.title' %></h1>
+
+<%= render "errors" %>
+
+<div class="panel borderless-top panel-default">
+	<div class="panel-body">
+		<% flash.each do |type, msg| %>
+			<% if type == :notice %>
+				<%= content_tag :div, msg, class: "alert alert-warning" %>
+			<% end %>
+    <% end %>
+		<div class="text-center">
+			<%= paginate @tutors %>
+		</div>
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Panel heading</div>
+		  <table class="table table-hover table-striped">
+		  	<tr>
+					<th><%= t('.tutor_name') %></th>
+					<th><%= table_sort('rate', t(:rate, scope: 'activerecord.attributes.tutor') ) %></th>
+					<th><%= table_sort('country', t(:country, scope: 'activerecord.attributes.tutor') ) %></th>
+					<th><%= t(:description, scope: 'activerecord.attributes.tutor') %></th>	
+				</tr>
+			  <% @tutors.each do |tutor| %>
+				<tr>
+					<td>
+						<strong>
+							<%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor) %>
+						</strong>
+					</td>
+					<td><%= tutor.rate %></td>
+					<td><%= tutor.country %></td>
+					<td><%= tutor.description %></td>
+				</tr>
+				<% end %>
+		  </table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+ko:
+  activerecord:
+    models:
+      user: 유저
+      tutor: 튜터
+      message: 메시지
+    attributes:
+      user:
+        email: 이메일
+        password: 암호
+        password_confirmation: 암호 확인
+        current_password: 현재 암호
+        first_name: 이름
+        last_name: 성
+        gender: 성별
+        gender_male: 남성
+        gender_female: 여성
+        birthday: 생년월일
+        terms: 서비스 약관
+        time_zone: 시간대
+      tutor:
+        country: 국적
+        rate: 가격
+        description: 상세 정보
+        education: 교육
+        educational_experiences_attributes: 교육 필드
+        languages: 언어
+      educational_experiences:
+        university: 대학교
+        major: 전공
+        minor: 부전공
+      languages:
+        language: 언어
+        proficiency: 능력
+        level:
+          beginner: 하급
+          intermediate: 중급
+          advanced: 고급
+          native: 모국어
+      message:
+        subject: 제목
+        body: 메시지
+        sender: 보내는 사람
+        recipient: 받는 사람
+        submitted: 보낸 날짜
+  errors:
+    educational_experiences_attributes:
+      too_many: 가 너무 많습니다.
+      no_university: 에서 대학이 입력되지 않습니다.
+      numeric: 에서 숫자 만 포함되어 있습니다.
+    messages:
+      required: 에 내용을 입력해 주세요
+      too_young: 은 부적합합니다.
+      too_old: 은 부적합합니다.
+      recipient_not_found: "죄송합니다. 사용자가 찾지 못했습니다 :("

@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+  	<%= f.text_field :university, class: "form-control", placeholder: "#{t(:university, scope: 'activerecord.attributes.educational_experiences')}" %>
+  </div>
+  <div class="col-xs-6 col-md-4">
+  	<%= f.text_field :major, class: "form-control", placeholder: "#{t(:major, scope: 'activerecord.attributes.educational_experiences')}" %>
+  </div>
+  <div class="col-xs-6 col-md-4">
+  	<%= f.text_field :minor, class: "form-control", placeholder: "#{t(:minor, scope: 'activerecord.attributes.educational_experiences')}" %>
+  </div>
+	<%= f.hidden_field :_destroy %>
+	<%= link_to "[remove]", "#", class: "remove_fields" %>
+</div>

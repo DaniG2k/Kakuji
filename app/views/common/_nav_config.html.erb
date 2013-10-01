@@ -1,0 +1,22 @@
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="glyphicon glyphicon-cog"></span> <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+  <% if user_signed_in? %>
+  	<li><%= link_to 'List Users', users_index_path %></li>
+		<li><%= link_to t('list_tutors', scope: 'common'), tutors_path %></li>
+		<li><%= link_to t('edit_profile', scope: 'common'), edit_user_registration_path %></li>
+		<% if current_user.is_tutor? %>
+			<li><%= link_to t('my_tutor_profile', scope: 'common'), tutor_path(current_user.tutor) %></li>
+			<li><%= link_to t('edit_tutor_profile', scope: 'common'), edit_tutor_path(current_user.tutor) %></li>
+		<% else %>
+			<li><%= link_to t('become_a_tutor', scope: 'common'), new_tutor_path %></li>
+		<% end %>
+			<li><%= link_to t('sign_out', scope: 'devise.sessions.destroy'), destroy_user_session_path, method: :delete %></li>
+	<% else %>
+		<li><%= link_to t('sign_up', scope: 'devise.registrations.new'), new_user_registration_path %></li>
+		<li><%= link_to t('sign_in', scope: 'devise.sessions.new'), new_user_session_path %></li>
+	<% end %>
+	</ul>
+</li>

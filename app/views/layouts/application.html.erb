@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<%= render 'layouts/head' %>
+<body>
+	<%= render "common/navbar" %>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<%= render 'common/left_nav' %>
+			</div>
+			<div class="col-md-8">
+			 	<%= yield %>
+			</div>
+		</div>
+	<%= render "common/footer" %>
+	</div>
+</body>
+</html>

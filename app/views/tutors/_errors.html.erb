@@ -1,0 +1,12 @@
+<% if @tutor and @tutor.errors.any? %>
+<div class="alert alert-danger alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<%= flash[:error] %>	
+	<%= t('errors.template.header', model: Tutor.model_name.human.downcase, count: @tutor.errors.count) %>
+	<ul>
+		<% @tutor.errors.full_messages.each do |message| %>
+  	<li><%= message %></li>
+  	<% end %>
+ 	 </ul>
+</div>
+<% end %>

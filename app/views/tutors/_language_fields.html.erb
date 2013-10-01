@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+  	<%= f.text_field :language, class: "form-control", placeholder: "#{t(:language, scope: 'activerecord.attributes.languages')}" %>
+  </div>
+  <div class="col-xs-6 col-md-4">
+  <%= f.select(:proficiency, options_for_select([
+		["#{t(:beginner, scope: 'activerecord.attributes.languages.level')}", 1],
+		["#{t(:intermediate, scope: 'activerecord.attributes.languages.level')}", 2],
+		["#{t(:advanced, scope: 'activerecord.attributes.languages.level')}", 3],
+		["#{t(:native, scope: 'activerecord.attributes.languages.level')}", 4]
+		])) %>
+	<%= f.hidden_field :_destroy %>
+	<%= link_to "[remove]", "#", class: "remove_fields" %>
+	</div>
+</div>
+<br />

@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<li class="dropdown<%= current_page?(controller: 'messages') ? " active" : '' %>">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="glyphicon glyphicon-envelope"></span> <b class="caret"></b>
+	</a>
+  <ul class="dropdown-menu">
+  	<li><%= link_to t('messages.index.title'), messages_path %></li>
+  </ul>
+</li>
+<% end %>
