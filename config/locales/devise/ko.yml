@@ -13,3 +13,7 @@ ko:
         remember: "메일 암호 저장"
       destroy:
         sign_out: "로그 아웃"
+    passwords:
+      new:
+        title: "암호를 잊으 셨나요?"
+        reset: "암호 재설정 지시를 만드세요!"

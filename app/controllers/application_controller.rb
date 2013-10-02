@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   private
+    # Devise's post-signin redirect page
+    def after_sign_in_path_for(resource)
+      tutors_path
+    end
+    
     def set_locale
       I18n.locale = params[:locale] || I18n.default_locale
     end
@@ -15,10 +20,6 @@ class ApplicationController < ActionController::Base
     def default_url_options(options={})
       logger.debug "default_url_options is passed options: #{options.inspect}\n"
       {locale: I18n.locale} 
-    end
-    
-    def after_sign_in_path_for(resource)
-      tutors_path
     end
     
     def user_time_zone(&block)

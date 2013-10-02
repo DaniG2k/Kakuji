@@ -13,3 +13,7 @@ ja:
         remember: "メール・パスワードの保存"
       destroy:
         sign_out: "ログアウト"
+    passwords:
+      new:
+        title: "パスワードをお忘れですか？"
+        reset: "パスワードリセット指示を送信！"

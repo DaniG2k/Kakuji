@@ -13,3 +13,7 @@ en:
         remember: "Remember me"
       destroy:
         sign_out: "Logout"
+    passwords:
+      new:
+        title: "Forgot your password?"
+        reset: "Send me reset password instructions"
