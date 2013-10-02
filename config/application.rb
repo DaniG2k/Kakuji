@@ -25,5 +25,11 @@ module Kakuji
     
     # Use this for adding custom directories with classes and modules
     config.autoload_paths += %W(#{config.root}/lib)
+    
+    # Configure Devise's layouts on a per-controller basis
+    config.to_prepare do
+      Devise::SessionsController.layout "simple"
+      Devise::PasswordsController.layout "simple"
+    end
   end
 end
