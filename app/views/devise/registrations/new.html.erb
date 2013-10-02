@@ -18,7 +18,9 @@
 		      <%= f.check_box :terms %> <%= t('terms', scope: 'activerecord.attributes.user') %>
 		    </label>
 		  </div>
-		  <%= f.submit t('.sign_up'), :class => 'btn btn-primary' %>
+		  <div class="text-center">
+		  	<%= f.submit t('.sign_up'), :class => 'btn btn-primary' %>
+		  </div>
 		<% end %>
 		<%= render "devise/shared/links" %>
   </div>
