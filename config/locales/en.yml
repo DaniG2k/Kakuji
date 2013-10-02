@@ -24,11 +24,6 @@
 en:
   website:
     name: Kakuji
-  language:
-    en: English
-    ch: Chinese
-    ja: Japanese
-    ko: Korean
   globals:
     current_country: Current country
     destroy_confirm: Are you sure?

@@ -1,11 +1,6 @@
 ja:
   website:
     name: カクジ
-  language:
-    en: 英語
-    ch: 中国語
-    ja: 日本語
-    ko: 韓国語
   globals:
     current_country: 現在に住んでいる国
     destroy_confirm: 本当に削除しても宜しいですか？

@@ -1,11 +1,6 @@
 ko:
   website:
     name: 카쿠지
-  language:
-    en: 영어
-    ch: 중국어
-    ja: 일본어
-    ko: 한국어
   globals:
     current_country: 현재에 살고있는 나라
     destroy_confirm: 정말 삭제 하시겠습니까?
