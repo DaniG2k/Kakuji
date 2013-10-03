@@ -6,19 +6,22 @@ namespace :db do
                 email: 'byakugan.87@gmail.com',
                 gender: 'male',
                 password: 'tecredoo0',
-                password_confirmation: 'tecredoo0')
-    99.times do |n|
+                password_confirmation: 'tecredoo0',
+                is_tutor: true)
+    (1..100).each_with_index do |n, idx|
       first_name = Faker::Name.first_name
       last_name = Faker::Name.last_name
-      email = "example-#{n+1}@railstutorial.org"
+      email = "example-#{n}@railstutorial.org"
       password = 'foobar000'
       gender = ['male', 'female'].sample
+      tutor = (idx < 50) ? true : false
       User.create!(first_name: first_name,
                   last_name: last_name,
                   email: email,
                   password: password,
                   password_confirmation: password,
-                  gender: gender)
+                  gender: gender,
+                  is_tutor: tutor)
     end
     
     50.times do |n|
