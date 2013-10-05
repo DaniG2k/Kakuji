@@ -1,7 +1,7 @@
 module ApplicationHelper
   def title(*parts)
     unless parts.empty?
-      content_for(:title) {(parts << t('website.name')).join(' - ')
+      content_for(:title) {(parts << t('website.name')).join(' - ')}
     end
   end
   
