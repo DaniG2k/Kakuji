@@ -66,6 +66,7 @@ en:
       title: Edit tutor profile
     show:
       title: My tutor profile
+      location_img: Tutor Location
   datetime:
     distance_in_words:
       ago: ago

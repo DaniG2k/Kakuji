@@ -28,6 +28,7 @@ class TutorsController < ApplicationController
   def show
     @educational_experiences = @tutor.educational_experiences
     @languages = @tutor.languages
+    @member_since = @tutor.created_at
   end
   
   def edit

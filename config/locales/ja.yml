@@ -43,6 +43,7 @@ ja:
       title: チューター・プロフィール編集
     show:
       title: 私のチューター・プロフィール
+      location_img: チューター位置
   datetime:
     distance_in_words:
       ago: 前
