@@ -21,6 +21,7 @@ ko:
       tutor:
         country: 국적
         rate: 가격
+        currency: 통화
         description: 상세 정보
         education: 교육
         educational_experiences_attributes: 교육 필드

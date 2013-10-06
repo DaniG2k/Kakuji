@@ -5,11 +5,12 @@
 			<div class="form-group">
 				<%= f.label :description, t('description', scope: 'activerecord.attributes.tutor') %>
 				<%= f.text_area :description, class: "form-control" %><br />
-			</div>	
+			</div>
 			
 			<div class="form-group">
 				<%= f.label :rate, t('rate', scope: 'activerecord.attributes.tutor') %>
 				<%= f.text_field :rate, class: "form-control" %><br />
+				<%= f.label :currency, t('currency', scope: 'activerecord.attributes.tutor') %>
 				<%= select(:tutor, :currency, options_for_select([
 					["$ (USD)", "USD"],
 					["¥ (JPY)", "JPY"],

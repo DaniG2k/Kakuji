@@ -1,7 +1,7 @@
 class Tutor < ActiveRecord::Base
   belongs_to :user
   has_many :educational_experiences, dependent: :destroy
-  has_many :languages, class_name: "TutorLanguages", foreign_key: "tutor_id", dependent: :destroy
+  has_many :languages, class_name: "TutorLanguages", foreign_key: "tutor_id", dependent: :destroy  
   
   accepts_nested_attributes_for :languages, allow_destroy: true,
     reject_if: lambda {|attr| attr[:language].blank? }

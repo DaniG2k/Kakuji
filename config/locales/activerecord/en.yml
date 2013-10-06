@@ -21,6 +21,7 @@ en:
       tutor:
         country: Country
         rate: Rate
+        currency: Currency
         description: Description
         education: Education
         educational_experiences_attributes: Educational experiences

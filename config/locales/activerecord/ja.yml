@@ -21,6 +21,7 @@ ja:
       tutor:
         country: 国籍
         rate: 料金
+        currency: 通貨
         description: 詳細情報
         education: 教育
         educational_experiences_attributes: 教育フィールド
