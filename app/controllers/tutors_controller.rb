@@ -6,10 +6,11 @@ class TutorsController < ApplicationController
   
   def index
     if params[:tag]
-      @tutors = Tutor.tagged_with(params[:tag]).includes(:user).order(sort_column + " " + sort_direction).page(params[:page]).per(15)
+      base = Tutor.tagged_with(params[:tag]).includes(:user)
     else
-      @tutors = Tutor.all.includes(:user).order(sort_column + " " + sort_direction).page(params[:page]).per(15)
+      base = Tutor.all.includes(:user)
     end
+    @tutors = base.order(sort_column + " " + sort_direction).page(params[:page]).per(15)
   end
   
   def new
@@ -59,7 +60,7 @@ class TutorsController < ApplicationController
   private
     def tutor_params
       params.require(:tutor).permit(:id, :description, :rate, :currency,
-      :country, :city, :postalcode, :street, :address,
+      :country, :city, :postalcode, :street, :address, :tag_list,
         languages_attributes: [:id, :language, :proficiency, :_destroy],
         educational_experiences_attributes:
         [:id, :university, :major, :minor, :_destroy]

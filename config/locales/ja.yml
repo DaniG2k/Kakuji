@@ -27,6 +27,7 @@ ja:
   messages:
     index:
       title: 受信トレイ
+      empty_inbox: 受信トレイにメッセージはありません。
     new:
       title: 新規メッセージ
       send: 送信

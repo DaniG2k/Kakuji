@@ -7,6 +7,8 @@ class Tutor < ActiveRecord::Base
     reject_if: lambda {|attr| attr[:language].blank? }
   accepts_nested_attributes_for :educational_experiences, allow_destroy: true,
     reject_if: lambda {|attr| %w(university major minor).all? { |val| attr[val].blank? }}
+  
+  acts_as_taggable
  
   validates_presence_of :user_id
   validates :rate, presence: true, numericality: true, format: {:with => /\A\d{1,5}(\.\d{0,2})?\z/}
@@ -25,7 +27,7 @@ class Tutor < ActiveRecord::Base
       errors.add(:address, "Address not found")
     end
   end
-  after_validation :geocode, if: :address_changed?
+  after_validation :geocode, if: :address_changed?  
   
   private
     def is_numeric?(str)

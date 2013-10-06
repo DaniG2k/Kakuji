@@ -31,5 +31,7 @@ module Kakuji
       Devise::SessionsController.layout "simple"
       Devise::PasswordsController.layout "simple"
     end
+    
+    ActsAsTaggableOn.force_lowercase = true
   end
 end

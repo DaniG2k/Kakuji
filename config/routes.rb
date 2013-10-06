@@ -10,6 +10,8 @@ Kakuji::Application.routes.draw do
     devise_for :users, controllers: {registrations: "registrations"}
     get "users/index"
     
+    get 'tags/:tag', to: 'tutors#index', as: :tag
+    
     resources :tutors do
       get 'page/:page', :action => :index, :on => :collection
     end

@@ -50,6 +50,7 @@ en:
   messages:
     index:
       title: Inbox
+      empty_inbox: Your inbox is currently empty. 
     new:
       title: New Message
       send: Send

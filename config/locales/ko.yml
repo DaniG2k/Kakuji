@@ -27,6 +27,7 @@ ko:
   messages:
     index:
       title: 받은 편지
+      empty_inbox: 받은 편지함에 메시지가 없습니다.
     new:
       title: 새 메시지
       send: 전송

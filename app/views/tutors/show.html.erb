@@ -9,7 +9,11 @@
 	<div class="panel-body">
 		
 		<p>Member since: <%= "#{[@registered_since.year, @registered_since.month, @registered_since.day].join '-'}" %></p>
-		
+		<strong><%= t :subjects, scope: 'activerecord.attributes.tutor' %>:</strong>
+		<% @tutor.tag_list.each do |tag| %>
+			<span class="label label-primary"><%= link_to tag, tag_path(tag) %></span>
+		<% end %>
+		<br />
 		<strong><%= t(:description, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.description%><br />
 		<strong><%= t(:rate, scope: 'activerecord.attributes.tutor') %></strong> <%= "#{@tutor.currency} #{@tutor.rate}" %><br />
 		<strong><%= t(:country, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.country %><br />

@@ -23,6 +23,8 @@ en:
         rate: Rate
         currency: Currency
         description: Description
+        subjects: Subjects
+        subjects_helptext: "Comma separated list (e.g. 'Cantonese, photography, mathematics')"
         education: Education
         educational_experiences_attributes: Educational experiences
         languages_attributes: Languages

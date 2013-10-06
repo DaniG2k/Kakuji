@@ -3,6 +3,9 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
+  <% if @messages.empty? %>
+  	<div class="alert alert-success"><%= t '.empty_inbox' %></div>
+  <% else %> 
     <table class="table table-bordered">
 		  <tr>
 		    <th><%= t 'subject', scope: 'activerecord.attributes.message' %></th>
@@ -10,7 +13,7 @@
 		    <th><%= t 'sender', scope: 'activerecord.attributes.message' %></th>
 		    <th><%= t 'recipient', scope: 'activerecord.attributes.message' %></th>
 		    <th><%= t 'submitted', scope: 'activerecord.attributes.message' %></th>
-		  </tr> 
+		  </tr>
 		  <% @messages.each do |message| %>
 		  <tr>
 		    <td><%= link_to(message.subject, message) %></td>
@@ -22,6 +25,7 @@
 		    </td>
 		  </tr>
 		  <% end %>
+	<% end %>
 		</table>
   </div>
 </div>
