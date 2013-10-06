@@ -8,10 +8,10 @@
 <div class="panel borderless-top panel-default">
 	<div class="panel-body">
 		
-		<p>Member since: <%= @member_since %></p>
+		<p>Member since: <%= "#{[@registered_since.year, @registered_since.month, @registered_since.day].join '-'}" %></p>
 		
 		<strong><%= t(:description, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.description%><br />
-		<strong><%= t(:rate, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.rate %><br />
+		<strong><%= t(:rate, scope: 'activerecord.attributes.tutor') %></strong> <%= "#{@tutor.currency} #{@tutor.rate}" %><br />
 		<strong><%= t(:country, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.country %><br />
 		<strong>Address:</strong> <%= @tutor.address %><br />
 		<p>

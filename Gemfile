@@ -57,7 +57,6 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'geocoder'
 
-
 #gem 'i18n_country_select'
 #gem 'i18n-timezones'
 

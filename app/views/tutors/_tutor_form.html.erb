@@ -10,6 +10,14 @@
 			<div class="form-group">
 				<%= f.label :rate, t('rate', scope: 'activerecord.attributes.tutor') %>
 				<%= f.text_field :rate, class: "form-control" %><br />
+				<%= select(:tutor, :currency, options_for_select([
+					["$ (USD)", "USD"],
+					["¥ (JPY)", "JPY"],
+					["₩ (KRW)", "KRW"],
+					["€ (EUR)", "EUR"],
+					["¥ (CNY)", "CNY"],
+					["£ (GBP)", "GBP"]]),
+					:class => "form-control input-sm") %>
 			</div>
 				
 			<%= t('current_country', scope: 'globals') %>

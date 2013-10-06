@@ -28,7 +28,7 @@ class TutorsController < ApplicationController
   def show
     @educational_experiences = @tutor.educational_experiences
     @languages = @tutor.languages
-    @member_since = @tutor.created_at
+    @registered_since = @tutor.created_at
   end
   
   def edit
@@ -36,7 +36,7 @@ class TutorsController < ApplicationController
     @tutor.languages.build
   end
   
-  def update    
+  def update
     if @tutor.update_attributes(tutor_params)
       set_user_is_tutor
       flash[:success] = 'Tutor profile updated!'
@@ -54,8 +54,8 @@ class TutorsController < ApplicationController
   
   private
     def tutor_params
-      params.require(:tutor).permit(:id, :description, :rate,
-        :country, :city, :postalcode, :street, :address,
+      params.require(:tutor).permit(:id, :description, :rate, :currency,
+      :country, :city, :postalcode, :street, :address,
         languages_attributes: [:id, :language, :proficiency, :_destroy],
         educational_experiences_attributes:
         [:id, :university, :major, :minor, :_destroy]
