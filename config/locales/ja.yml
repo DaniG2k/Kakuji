@@ -38,6 +38,7 @@ ja:
     index:
       title: チューター・一覧
       tutor_name: チューター氏名
+      view_tutor_button: 表示
     new:
       title: チューター登録
     edit:

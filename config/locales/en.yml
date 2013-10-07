@@ -61,6 +61,7 @@ en:
     index:
       title: Tutors
       tutor_name: Tutor Name
+      view_tutor_button: View
     new:
       title: Become a tutor
     edit:
