@@ -24,7 +24,7 @@ ko:
         currency: 통화
         description: 상세 정보
         subjects: 과목
-        subjects_helptext: "쉼표로 구분 된 목록 (예: '광동어, 사진, 수학')"
+        subjects_helptext: "쉼표로 구분 된 목록 (예: 광동어, 사진, 수학)"
         education: 교육
         educational_experiences_attributes: 교육 필드
         languages: 언어

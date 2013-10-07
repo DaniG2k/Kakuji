@@ -32,6 +32,7 @@ module Kakuji
       Devise::PasswordsController.layout "simple"
     end
     
+    ActsAsTaggableOn.delimiter = [',', '、'] #Handle Japanese commas
     ActsAsTaggableOn.force_lowercase = true
   end
 end

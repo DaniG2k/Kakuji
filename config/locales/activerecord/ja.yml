@@ -24,7 +24,7 @@ ja:
         currency: 通貨
         description: 詳細情報
         subjects: 科目
-        subjects_helptext: "カンマ区切りリスト（例：'広東語, 写真, 数学'）"
+        subjects_helptext: "カンマ区切りリスト（例：広東語、写真、数学）"
         education: 教育
         educational_experiences_attributes: 教育フィールド
         languages: 言語
