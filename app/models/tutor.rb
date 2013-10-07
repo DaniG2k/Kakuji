@@ -24,7 +24,7 @@ class Tutor < ActiveRecord::Base
       obj.postalcode = geo.postal_code
       obj.address = geo.address
     else
-      errors.add(:address, "Address not found")
+      binding.pry
     end
   end
   after_validation :geocode, if: :address_changed?  

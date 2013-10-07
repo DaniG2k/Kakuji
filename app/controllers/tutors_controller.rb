@@ -80,9 +80,7 @@ class TutorsController < ApplicationController
     end
     
     def set_user_is_tutor
-      unless current_user.is_tutor?
-        current_user.update_attribute(:is_tutor, true)
-      end
+      current_user.update_attribute(:is_tutor, true) unless current_user.is_tutor?
     end
     
     def parse_geolocation
@@ -91,9 +89,6 @@ class TutorsController < ApplicationController
       postalcode = params[:tutor][:postalcode].downcase
       street = params[:tutor][:street].downcase
       
-      address = Array.new
-      [street, postalcode, city, country].each {|attr| address << attr.humanize if attr.present?}
-      address = address.join(', ')
-      params[:tutor][:address] = address
+      params[:tutor][:address] = [street, postalcode, city, country].compact.join(', ')
     end
 end
