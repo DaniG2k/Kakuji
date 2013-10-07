@@ -19,7 +19,7 @@
 		<strong><%= t(:country, scope: 'activerecord.attributes.tutor') %></strong> <%= @tutor.country %><br />
 		<strong>Address:</strong> <%= @tutor.address %><br />
 		<p>
-			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x450&sensor=false&zoom=16&markers=#{@tutor.latitude}%2C#{@tutor.longitude}", :class => "img-thumbnail", :alt => "#{t('.location_img')}" %>
+			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x450&sensor=false&zoom=16&markers=#{@tutor.latitude}%2C#{@tutor.longitude}&language=#{locale.to_s}", :class => "img-thumbnail", :alt => "#{t('.location_img')}" %>
 			<p>
 				<%= t(:education, scope: 'activerecord.attributes.tutor') %>
 			</p>
