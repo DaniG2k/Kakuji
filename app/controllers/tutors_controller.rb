@@ -5,12 +5,8 @@ class TutorsController < ApplicationController
   helper_method :sort_column, :sort_direction
   
   def index
-    if params[:tag]
-      base = Tutor.tagged_with(params[:tag]).includes(:user)
-    else
-      base = Tutor.all.includes(:user)
-    end
-    @tutors = base.order(sort_column + " " + sort_direction).page(params[:page]).per(15)
+    base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
+    @tutors = base.includes(:user).order(sort_column + " " + sort_direction).page(params[:page]).per(15)
   end
   
   def new
@@ -23,7 +19,6 @@ class TutorsController < ApplicationController
     @tutor = current_user.build_tutor(tutor_params)
     if @tutor.save
       set_user_is_tutor
-      flash[:success] = 'Tutor profile created!'
       redirect_to @tutor
     else
       render 'new'
@@ -44,7 +39,6 @@ class TutorsController < ApplicationController
   def update
     if @tutor.update_attributes(tutor_params)
       set_user_is_tutor
-      flash[:success] = 'Tutor profile updated!'
       redirect_to @tutor
     else
       render 'edit'
