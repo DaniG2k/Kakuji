@@ -13,14 +13,15 @@
 		<div class="text-center">
 			<%= paginate @tutors %>
 		</div>
-		<div class="panel panel-primary">
+		<div class="panel panel-default">
 		  <div class="panel-heading">Panel heading</div>
-		  <table class="table table-hover table-striped">
+		  <table class="table table-hover table-striped table-bordered">
 		  	<tr>
 					<th><%= t('.tutor_name') %></th>
 					<th><%= table_sort('rate', t(:rate, scope: 'activerecord.attributes.tutor') ) %></th>
 					<th><%= table_sort('country', t(:country, scope: 'activerecord.attributes.tutor') ) %></th>
-					<th><%= t(:description, scope: 'activerecord.attributes.tutor') %></th>	
+					<th><%= t(:description, scope: 'activerecord.attributes.tutor') %></th>
+					<th>Details</th>
 				</tr>
 			  <% @tutors.each do |tutor| %>
 				<tr>
@@ -32,6 +33,9 @@
 					<td><%= tutor.rate %></td>
 					<td><%= tutor.country %></td>
 					<td><%= tutor.description %></td>
+					<td class="text-center">
+						<button type="button" class="btn btn-success btn-xs">View</button>
+					</td>
 				</tr>
 				<% end %>
 		  </table>
