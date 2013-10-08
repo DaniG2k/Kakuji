@@ -50,8 +50,12 @@ class Tutor < ActiveRecord::Base
         errors.add(:educational_experiences_attributes, "#{I18n.t('errors.educational_experiences_attributes.too_many')}")
       end
     end
-  # This can be used for SEO friendliness
-  #def to_param
-  #  "#{user.first_name}".parameterize
-  #end
+    
+    def address_changed?
+      %w(country city postalcode address).any? { |attr| send "#{attr}_changed?" }
+    end
+    # This can be used for SEO friendliness
+    #def to_param
+    #  "#{user.first_name}".parameterize
+    #end
 end
