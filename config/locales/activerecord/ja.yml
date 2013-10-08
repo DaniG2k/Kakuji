@@ -20,6 +20,7 @@ ja:
         time_zone: 時間帯
       tutor:
         country: 国籍
+        address: 住所
         rate: 料金
         currency: 通貨
         description: 詳細情報
@@ -47,6 +48,8 @@ ja:
         recipient: 受信者
         submitted: 送信日
   errors:
+    tutors:
+      address: を修正してください。
     educational_experiences_attributes:
       too_many: が多すぎます。
       no_university: で大学が入力されていません。

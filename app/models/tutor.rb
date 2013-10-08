@@ -15,6 +15,7 @@ class Tutor < ActiveRecord::Base
   validates_length_of :description, maximum: 1000, allow_blank: false
   validate :check_educational_experiences, on: :update
   
+  validates_presence_of :address, message: I18n.t('address', scope: 'errors.tutors')
   geocoded_by :address do |obj, results|
     if geo = results.first
       obj.latitude = geo.latitude
@@ -23,9 +24,11 @@ class Tutor < ActiveRecord::Base
       obj.city = geo.city
       obj.postalcode = geo.postal_code
       obj.address = geo.address
+    else
+      obj.address = nil
     end
   end
-  after_validation :geocode, if: :address_changed?
+  before_validation :geocode, if: :address_changed?
   
   private
     def is_numeric?(str)

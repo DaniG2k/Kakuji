@@ -20,6 +20,7 @@ ko:
         time_zone: 시간대
       tutor:
         country: 국적
+        address: 주소
         rate: 가격
         currency: 통화
         description: 상세 정보
@@ -47,6 +48,8 @@ ko:
         recipient: 받는 사람
         submitted: 보낸 날짜
   errors:
+    tutors:
+      address: 수정하십시오.
     educational_experiences_attributes:
       too_many: 가 너무 많습니다.
       no_university: 에서 대학이 입력되지 않습니다.

@@ -20,6 +20,7 @@ en:
         time_zone: Time zone
       tutor:
         country: Country
+        address: Address
         rate: Rate
         currency: Currency
         description: Description
@@ -47,6 +48,8 @@ en:
         recipient: Recipient
         submitted: Submitted  
   errors:
+    tutors:
+      address: appears to be incorrect.
     educational_experiences_attributes:
       too_many: are more than necessary.
       no_university: has a missing university field.
