@@ -23,7 +23,6 @@ ja:
     copyright: "%{website} ©　%{year_range}年。 無断複写·転載を禁じます。"
     search:
       placeholder: サイト内検索
-      button: 検索
   messages:
     index:
       title: 受信トレイ

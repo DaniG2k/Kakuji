@@ -46,7 +46,6 @@ en:
       copyright: "%{website} © %{year_range}. All rights reserved."
       search:
         placeholder: Search
-        button: Submit
   messages:
     index:
       title: Inbox
