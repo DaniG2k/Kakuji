@@ -48,8 +48,6 @@ ja:
         recipient: 受信者
         submitted: 送信日
   errors:
-    tutors:
-      address: を修正してください。
     educational_experiences_attributes:
       too_many: が多すぎます。
       no_university: で大学が入力されていません。
@@ -58,4 +56,5 @@ ja:
       required: を入力してください。
       too_young: は不適合です。若すぎるかもしれません。
       too_old: は不適合です。
+      not_found: "は見つかりませんでした。"
       recipient_not_found: "申し訳ありません！そのユーザーが見つけられませんでした。:("

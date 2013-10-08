@@ -15,7 +15,7 @@ class Tutor < ActiveRecord::Base
   validates_length_of :description, maximum: 1000, allow_blank: false
   validate :check_educational_experiences, on: :update
   
-  validates_presence_of :address, message: I18n.t('address', scope: 'errors.tutors')
+  validates_presence_of :address, message: I18n.t('errors.messages.not_found')
   geocoded_by :address do |obj, results|
     if geo = results.first
       obj.latitude = geo.latitude

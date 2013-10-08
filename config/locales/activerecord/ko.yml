@@ -48,8 +48,6 @@ ko:
         recipient: 받는 사람
         submitted: 보낸 날짜
   errors:
-    tutors:
-      address: 수정하십시오.
     educational_experiences_attributes:
       too_many: 가 너무 많습니다.
       no_university: 에서 대학이 입력되지 않습니다.
@@ -58,4 +56,5 @@ ko:
       required: 에 내용을 입력해 주세요
       too_young: 은 부적합합니다.
       too_old: 은 부적합합니다.
+      not_found: "를 찾을 수 않았습니다."
       recipient_not_found: "죄송합니다. 사용자가 찾지 못했습니다 :("

@@ -48,8 +48,6 @@ en:
         recipient: Recipient
         submitted: Submitted  
   errors:
-    tutors:
-      address: appears to be incorrect.
     educational_experiences_attributes:
       too_many: are more than necessary.
       no_university: has a missing university field.
@@ -58,4 +56,5 @@ en:
       required: can't be blank.
       too_young: unaccepted. You may be a bit too young.
       too_old: unaccepted. Aren't you a little old for this?
+      not_found: " not found."
       recipient_not_found: "Sorry! That recipient was not found :("
