@@ -31,6 +31,10 @@ class Tutor < ActiveRecord::Base
   before_validation :geocode, if: :address_changed?
   
   private
+    def address_changed?
+      %w(country city postalcode address).any? { |attr| send "#{attr}_changed?" }
+    end
+    
     def is_numeric?(str)
       /\A[+-]?\d+(\.|,)?\d*\z/ === str.strip
     end
@@ -49,10 +53,6 @@ class Tutor < ActiveRecord::Base
       if educational_experiences.size > 10
         errors.add(:educational_experiences_attributes, "#{I18n.t('errors.educational_experiences_attributes.too_many')}")
       end
-    end
-    
-    def address_changed?
-      %w(country city postalcode address).any? { |attr| send "#{attr}_changed?" }
     end
     # This can be used for SEO friendliness
     #def to_param
