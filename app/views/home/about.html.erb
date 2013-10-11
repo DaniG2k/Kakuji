@@ -12,13 +12,13 @@ Project Purple is here to solve that problem. We connect you to the talent that 
 	<div class="panel panel-default">
 		<div class="panel-body">
 		  <div class="col-xs-12 col-md-8">
-				<h2>Find your tutor</h2>
+				<h2>1. Find your tutor</h2>
 				<strong>Students</strong>
 				<p>Simply register and look at available tutors near you.
 				If there aren't any, tell us what you're looking for and
 				we'll e-mail you as soon as a match in your extended area
 				comes up! Prefer to not receive email? Just check your 
-				dashboard on Project Purple and a notification will pop 
+				dashboard and a notification will pop 
 				up with your match.</p>
 				<strong>Tutors</strong>
 				<p>Sign up, input your details and voila! Students will be 
@@ -33,7 +33,7 @@ Project Purple is here to solve that problem. We connect you to the talent that 
 		<div class="panel-body">
 			<div class="col-xs-6 col-md-4 text-center"><%= image_tag "contact.png" %></div>
   		<div class="col-xs-12 col-md-8">
-		    <h2>Contact</h2>
+		    <h2>2. Get in touch</h2>
 		  	<strong>Students</strong>
 		  	<p>Contact your tutor with zero hassle.</p>
 				<strong>Tutors</strong>
@@ -48,7 +48,7 @@ Project Purple is here to solve that problem. We connect you to the talent that 
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<div class="col-xs-12 col-md-8">
-		    <h2>Schedule your lessons and start learning!</h2>
+		    <h2>3. Start learning!</h2>
 				<strong>Students & Tutors</strong>
 		  	<p>Input your availability and meet up!</p>
 			</div>
@@ -58,8 +58,8 @@ Project Purple is here to solve that problem. We connect you to the talent that 
 </div>
 <hr />
 <div class="text-center">
-	<button type="button" class="btn btn-primary btn-lg">
-		Wow <span class="glyphicon glyphicon-heart"></span> Count me in!
-	</button>
+	<%= link_to new_user_registration_path, class: "btn btn-primary btn-lg" do %>
+		Wow! <span class="glyphicon glyphicon-heart"></span> Count me in
+	<% end %>
 </div>
 <hr />
