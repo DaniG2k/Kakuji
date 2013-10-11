@@ -1,4 +1,4 @@
-module TutorsHelper
+module TutorsHelper    
   def parse_proficiency(proficiency_int)
     case proficiency_int
     when 1
