@@ -29,6 +29,7 @@ ja:
         education: 教育
         educational_experiences_attributes: 教育フィールド
         languages: 言語
+        add_field: フィールド追加
       educational_experiences:
         university: 大学
         major: 専攻

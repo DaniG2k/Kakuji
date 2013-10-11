@@ -44,7 +44,7 @@ class Tutor < ActiveRecord::Base
         uni = edu.university
         maj = edu.major
         min = edu.minor
-        if edu.blank? and (maj.present? or min.present?)
+        if uni.blank? and (maj.present? || min.present?)
           errors.add(:educational_experiences_attributes, "#{I18n.t('errors.educational_experiences_attributes.no_university')}")
         elsif [uni, maj, min].any? { |str| is_numeric?(str) }
           errors.add(:educational_experiences_attributes, "#{I18n.t('errors.educational_experiences_attributes.numeric')}")

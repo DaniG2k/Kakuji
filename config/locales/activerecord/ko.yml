@@ -29,6 +29,7 @@ ko:
         education: 교육
         educational_experiences_attributes: 교육 필드
         languages: 언어
+        add_field: 필드 추가
       educational_experiences:
         university: 대학교
         major: 전공

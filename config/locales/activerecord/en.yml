@@ -29,6 +29,7 @@ en:
         education: Education
         educational_experiences_attributes: Educational experiences
         languages_attributes: Languages
+        add_field: Add field
       educational_experiences:
         university: University
         major: Major
