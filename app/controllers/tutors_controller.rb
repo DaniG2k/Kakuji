@@ -77,11 +77,11 @@ class TutorsController < ApplicationController
     end
     
     def parse_geolocation
-      country = params[:tutor][:country].downcase
-      city = params[:tutor][:city].downcase
-      postalcode = params[:tutor][:postalcode].downcase
-      street = params[:tutor][:street].downcase
-      
-      params[:tutor][:address] = [street, postalcode, city, country].compact.join(', ')
+      p = params[:tutor]
+      params[:tutor][:address] = [
+        p[:country],
+        p[:postalcode],
+        p[:city],
+        p[:street]].delete_if(&:empty?).join ', '
     end
 end
