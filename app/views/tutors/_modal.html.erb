@@ -7,7 +7,11 @@
         <h4 class="modal-title"><%= tutor.user.fullname %></h4>
       </div>
 	    <div class="modal-body">
-	          ...
+	    	<% if tutor.user.avatar.present? %>
+	    		<%= image_tag(tutor.user.avatar, :class => "img-thumbnail") %>
+	    	<% else %>
+	    		<%= image_tag("icon-user.png", :class => "img-thumbnail", :size => "180x180") %>
+	    	<% end %>
 	    </div>
 	    <div class="modal-footer">
 		    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
