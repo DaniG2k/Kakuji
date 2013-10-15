@@ -15,10 +15,9 @@ class Tutor < ActiveRecord::Base
   validates :rate, presence: true, numericality: true, format: {:with => /\A\d{1,5}(\.\d{0,2})?\z/}
   validates_length_of :description, maximum: 1000, allow_blank: false
   validate :check_educational_experiences, on: :update
-  #validates_presence_of :address, message: I18n.t('errors.messages.not_found')
+  validates_presence_of :address, message: I18n.t('errors.messages.not_found')
   
   geocoded_by :address do |obj, results|
-    binding.pry
     if geo = results.first
       obj.latitude = geo.latitude
       obj.longitude = geo.longitude
