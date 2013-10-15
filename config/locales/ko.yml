@@ -40,6 +40,7 @@ ko:
       view_tutor_button: 표시
     modal:
       contact: 연락
+      close: 닫기
     new:
       title: 튜터 등록
     edit:

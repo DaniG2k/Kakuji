@@ -10,11 +10,13 @@
 	          ...
 	    </div>
 	    <div class="modal-footer">
-		    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+		    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+		    	<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;<%= t '.close' %>
+		    </button>
 	  	  <%= link_to new_message_path(:recipient_id => tutor), class: "btn btn-primary btn-sm" do %>
 	  	  	<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;<%= t '.contact' %>
 	  	  <% end %>
 	    </div>
-  	</div><!-- /.Modal-content -->
-	</div><!-- /.Modal-dialog -->
-</div><!-- /.Modal -->
+  	</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

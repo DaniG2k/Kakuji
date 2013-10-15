@@ -63,6 +63,7 @@ en:
       view_tutor_button: View
     modal:
       contact: Contact
+      close: Close
     new:
       title: Become a tutor
     edit:

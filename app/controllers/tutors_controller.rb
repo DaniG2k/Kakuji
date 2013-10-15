@@ -6,7 +6,7 @@ class TutorsController < ApplicationController
   
   def index
     base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
-    @tutors = base.includes(:user).order(sort_column + " " + sort_direction).page(params[:page]).per(15)
+    @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(15)
   end
   
   def new
