@@ -7,20 +7,29 @@
         <h4 class="modal-title"><%= tutor.user.fullname %></h4>
       </div>
 	    <div class="modal-body">
-	    	<% if tutor.user.avatar.present? %>
-	    		<%= image_tag(tutor.user.avatar, :class => "img-thumbnail") %>
-	    	<% else %>
-	    		<%= image_tag("icon-user.png", :class => "img-thumbnail", :size => "180x180") %>
-	    	<% end %>
-	    </div>
+	    	<div class="row">
+	    		<div class="col-md-4">
+	    		<% if tutor.user.avatar.present? %>
+			    	<%= image_tag(tutor.user.avatar, :class => 'img-thumbnail') %>
+			    <% else %>
+			    	<%= image_tag('icon-user.png', :class => 'img-thumbnail', :size => '180x180') %>
+			    <% end %>
+	    		</div>
+				  <div class="col-md-8">
+						<%= tutor.description %><br />
+				  	<%= tutor.rate %><br />
+				  	<%= tutor.country %>
+				  </div>
+				</div><!-- End row-->
+	    </div><!-- End modal-body-->
 	    <div class="modal-footer">
 		    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
 		    	<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;<%= t '.close' %>
 		    </button>
-	  	  <%= link_to new_message_path(:recipient_id => tutor), class: "btn btn-primary btn-sm" do %>
+	  	  <%= link_to(new_message_path(:recipient_id => tutor), class: "btn btn-primary btn-sm") do %>
 	  	  	<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;<%= t '.contact' %>
 	  	  <% end %>
 	    </div>
-  	</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+  	</div><!-- End modal-content -->
+	</div><!-- End modal-dialog -->
+</div><!-- End modal -->
