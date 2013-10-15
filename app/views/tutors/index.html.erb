@@ -37,12 +37,12 @@
 					<td><%= tutor.country %></td>
 					<td><%= tutor.description %></td>
 					<td class="text-center">
-						<%= link_to t('.view_tutor_button'), "#myModal", "data-toggle" => "modal", :class => "btn btn-success btn-xs" %>
+						<%= link_to t('.view_tutor_button'), "#tModal#{tutor.id}", "data-toggle" => "modal", :class => "btn btn-success btn-xs" %>
 					</td>
 				</tr>
+				<%= render :partial => 'modal', :locals => {:tutor => tutor} %>
 				<% end %>
 		  </table>
 		</div>
 	</div>
 </div>
-<%= render 'modal' %>

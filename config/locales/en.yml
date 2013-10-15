@@ -61,6 +61,8 @@ en:
       title: Tutors
       tutor_name: Tutor Name
       view_tutor_button: View
+    modal:
+      contact: Contact
     new:
       title: Become a tutor
     edit:

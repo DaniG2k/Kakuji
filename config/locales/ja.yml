@@ -38,6 +38,8 @@ ja:
       title: チューター・一覧
       tutor_name: チューター氏名
       view_tutor_button: 表示
+    modal:
+      contact: 連絡
     new:
       title: チューター登録
     edit:
