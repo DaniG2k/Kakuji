@@ -1,0 +1,16 @@
+<% if educational_experiences.present? %>
+<table class="table table-bordered table-striped table-condensed">
+	<tr>
+		<td><strong><%= t :university, scope: 'activerecord.attributes.educational_experiences' %></strong></td>
+		<td><strong><%= t :major, scope: 'activerecord.attributes.educational_experiences' %></strong></td>
+		<td><strong><%= t :minor, scope: 'activerecord.attributes.educational_experiences' %></strong></td>
+	</tr>
+	<% educational_experiences.each do |e| %>
+	<tr>
+		<td><%= e.university %></td>
+		<td><%= e.major %></td>
+		<td><%= e.minor %></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>

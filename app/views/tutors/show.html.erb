@@ -20,41 +20,11 @@
 		<strong>Address:</strong> <%= @tutor.address %><br />
 		<p>
 			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x450&sensor=false&zoom=16&markers=#{@tutor.latitude}%2C#{@tutor.longitude}&language=#{locale.to_s}", :class => "img-thumbnail", :alt => "#{t('.location_img')}" %>
-			<p>
-				<%= t(:education, scope: 'activerecord.attributes.tutor') %>
-			</p>
-			
-			<% if @educational_experiences.present? %>
-			<table class="table table-bordered table-striped table-condensed">
-				<tr>
-					<td><strong><%= t(:university, scope: 'activerecord.attributes.educational_experiences') %></strong></td>
-					<td><strong><%= t(:major, scope: 'activerecord.attributes.educational_experiences') %></strong></td>
-					<td><strong><%= t(:minor, scope: 'activerecord.attributes.educational_experiences') %></strong></td>
-				</tr>
-				<% @educational_experiences.each do |education| %>
-				<tr>
-					<td><%= education.university %></td>
-					<td><%= education.major %></td>
-					<td><%= education.minor %></td>
-				</tr>
-				<% end %>
-			</table>
-			<% end %>
-			
-			
-			<% if @languages.present? %>
-			<table class="table table-bordered table-striped table-condensed">
-			<tr>
-				<td><strong><%= t(:language, scope: 'activerecord.attributes.languages') %></strong></td>
-				<td><strong><%= t(:proficiency, scope: 'activerecord.attributes.languages') %></strong></td>
-			</tr>
-				<% @languages.each do |lang_info| %>
-				<tr>
-					<td><%= lang_info.language %></td>
-					<td><%= parse_proficiency(lang_info.proficiency) %></td>
-				</tr>
-				<% end %>	
-			</table>
-			<% end %>	
+		</p>	
+		<p>
+			<%= t(:education, scope: 'activerecord.attributes.tutor') %>
+		</p>
+		<%= render partial: 'table_educational_experiences', locals: {educational_experiences: @educational_experiences} %>
+		<%= render partial: 'table_languages', locals: {languages: @languages} %>
 	</div><!-- End Panel-body -->
 </div><!-- End Panel -->

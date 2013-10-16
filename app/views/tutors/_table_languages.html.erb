@@ -1,0 +1,14 @@
+<% if languages.present? %>
+<table class="table table-bordered table-striped table-condensed">
+	<tr>
+		<td><strong><%= t :language, scope: 'activerecord.attributes.languages' %></strong></td>
+		<td><strong><%= t :proficiency, scope: 'activerecord.attributes.languages' %></strong></td>
+	</tr>
+	<% languages.each do |l| %>
+	<tr>
+		<td><%= l.language %></td>
+		<td><%= parse_proficiency(l.proficiency) %></td>
+	</tr>
+	<% end %>	
+</table>
+<% end %>
