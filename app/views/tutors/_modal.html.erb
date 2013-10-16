@@ -18,7 +18,25 @@
 				  <div class="col-md-8">
 						<%= tutor.description %><br />
 				  	<%= tutor.rate %><br />
-				  	<%= tutor.country %>	  	
+				  	<%= tutor.country %>
+				  	<% if tutor.educational_experiences.any? %>
+				  		<% tutor.educational_experiences.each do |e| %>
+							<ol>
+								<%= content_tag :li, e.university %>
+								<%= content_tag :li, e.major %>
+								<%= content_tag :li, e.minor %>
+							</ol>
+							<% end %>
+				  	<% end %>
+				  	
+					  <% if tutor.languages.any? %>
+					  	<% tutor.languages.each do |l| %>
+							<ol>
+								<%= content_tag :li, l.language %>
+								<%= content_tag :li, parse_proficiency(l.proficiency) %>
+							</ol>
+							<% end %>
+					  <% end %>
 				  </div>
 				</div><!-- End row-->
 	    </div><!-- End modal-body-->

@@ -32,7 +32,7 @@ class Tutor < ActiveRecord::Base
   
   private
     def address_changed?
-      # Don't include address or it will result in infinite loop
+      # Don't include address or it will result in stack too deep
       %w(country city postalcode).any? { |attr| send "#{attr}_changed?" }
     end
   
