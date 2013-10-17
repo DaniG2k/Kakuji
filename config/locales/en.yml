@@ -56,6 +56,9 @@ en:
       recipient: "to %{user}"
     show:
       title: Conversation
+  users:
+    privacy:
+      title: Privacy Policy
   tutors:
     index:
       title: Tutors

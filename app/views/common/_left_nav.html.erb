@@ -2,8 +2,8 @@
 	<a href="#" class="list-group-item active">
 	Random
 	</a>
-	<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-	<a href="#" class="list-group-item">Morbi leo risus</a>
-	<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-	<a href="#" class="list-group-item">Vestibulum at eros</a>
+	<%= link_to t('list_tutors', scope: 'common'), tutors_path, class: "list-group-item" %>
+	<%= link_to t('messages.index.title'), messages_path, class: "list-group-item" %>
+	<%= link_to t('users.privacy.title'), privacy_path, class: "list-group-item" %>
+	<a href="#" class="list-group-item">Help</a>
 </div>

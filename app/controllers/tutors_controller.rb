@@ -1,6 +1,6 @@
 class TutorsController < ApplicationController
   before_action :authenticate_user!
-  before_action :get_tutor, except: :create
+  before_action :set_tutor, except: :create
   before_action :parse_geolocation, only: :update
   helper_method :sort_column, :sort_direction
   
@@ -60,7 +60,7 @@ class TutorsController < ApplicationController
       )
     end
     
-    def get_tutor
+    def set_tutor
       @tutor = current_user.tutor
     end
     

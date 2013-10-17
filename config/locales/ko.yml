@@ -33,6 +33,9 @@ ko:
       recipient: "%{user}님 에게"
     show:
       title: 대화
+  useres:
+    privacy:
+      title: 개인 정보 보호 정책
   tutors:
     index:
       title: 튜터 목록

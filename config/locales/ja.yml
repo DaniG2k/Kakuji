@@ -33,6 +33,9 @@ ja:
       recipient: "%{user}さんへ"
     show:
       title: カンバセーション
+  users:
+    privacy:
+      title: 個人情報保護方針
   tutors:
     index:
       title: チューター・一覧
