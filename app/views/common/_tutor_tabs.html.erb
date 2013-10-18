@@ -1,6 +1,6 @@
 <% if current_user.is_tutor? %>
 <ul class="nav nav-tabs">
-	<%= current_page?(edit_user_registration_path) ? content_tag(:li, link_to(t('edit_profile', scope: 'common'), edit_user_registration_path), :class => "active") : content_tag(:li, link_to(t('edit_profile', scope: 'common'), edit_user_registration_path)) %>
-  <%= current_page?(edit_tutor_path(current_user.tutor)) ? content_tag(:li, link_to(t('edit_tutor_profile', scope: 'common'), edit_tutor_path(current_user.tutor)), :class => "active") : content_tag(:li, link_to(t('edit_tutor_profile', scope: 'common'), edit_tutor_path(current_user.tutor))) %>
+	<%= content_tag :li, link_to(t('edit_profile', scope: 'common'), edit_user_registration_path), class: current_page?(edit_user_registration_path) ? "active" : '' %>
+  <%= content_tag :li, link_to(t('edit_tutor_profile', scope: 'common'), edit_tutor_path(current_user.tutor)), class: current_page?(edit_tutor_path(current_user.tutor)) ? "active" : '' %>
 </ul>
 <% end %>
