@@ -9,7 +9,7 @@
 			
 			<div class="form-group">
 				<%= f.label :tag_list, t('subjects', scope: 'activerecord.attributes.tutor') %>
-				<%= f.text_field :tag_list, class: "form-control" %>
+				<%= f.text_field :tag_list, class: "form-control", id: "myTags" %>
 				<p class="help-block">
 					<%= t 'subjects_helptext', scope: 'activerecord.attributes.tutor' %>
 				</p>
