@@ -15,5 +15,9 @@
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require twitter/bootstrap
+//= require select2
+//= require select2_locale_ja
+//= require select2_locale_ko
+//= require select2_locale_zh-CN
 //= require turbolinks
 //= require_tree .
