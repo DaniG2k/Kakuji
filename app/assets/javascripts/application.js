@@ -14,9 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.ui.datepicker
-//= require jquery.ui.autocomplete
-//= require jquery.ui.effect-blind
-//= require jquery.ui.effect-highlight
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
