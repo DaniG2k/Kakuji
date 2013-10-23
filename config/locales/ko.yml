@@ -50,7 +50,11 @@ ko:
       title: 튜터 프로파일 편집
     show:
       title: 내 튜터 프로파일
-      location_img: 튜터 위치 
+      location_img: 튜터 위치
+  contact:
+    new:
+      title: 문의
+      send: 문의 
   datetime:
     distance_in_words:
       ago: 전

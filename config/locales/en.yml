@@ -74,6 +74,10 @@ en:
     show:
       title: My tutor profile
       location_img: Tutor Location
+  contact:
+    new:
+      title: Contact Us
+      send: Send
   datetime:
     distance_in_words:
       ago: ago

@@ -51,6 +51,10 @@ ja:
     show:
       title: 私のチューター・プロフィール
       location_img: チューター位置
+  contact:
+    new:
+      title: お問い合わせ
+      send: 送信
   datetime:
     distance_in_words:
       ago: 前
