@@ -1,4 +1,8 @@
 <% title t '.title' %>
 <h1><%= t '.title' %> <small><%= t '.subtitle' %></small></h1>
- 
-<%= render 'form', :inquiry => @inquiry %>
+
+<div class="panel borderless-top panel-default">
+	<div class="panel-body">
+		<%= render 'form', :inquiry => @inquiry %>
+	</div>
+</div>

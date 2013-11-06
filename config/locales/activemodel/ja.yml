@@ -1,6 +1,7 @@
 ja:
   activemodel:
-    inquiry:
-      name: 名前
-      email: メール
-      message: メッセージ
+    attributes:
+      inquiry:
+        name: お名前
+        email: メール
+        message: メッセージ
