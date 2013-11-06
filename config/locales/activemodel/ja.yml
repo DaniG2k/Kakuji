@@ -1,5 +1,7 @@
 ja:
   activemodel:
+    models:
+      contact: お問い合わせフォーム
     attributes:
       contact:
         name: お名前

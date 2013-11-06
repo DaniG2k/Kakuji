@@ -1,5 +1,7 @@
 ko:
   activemodel:
+    models:
+      contact: 문의 양식
     attributes:
       contact:
         name: 이름

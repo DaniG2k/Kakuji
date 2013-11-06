@@ -1,5 +1,7 @@
 en:
   activemodel:
+    models:
+      contact: Contact form
     attributes:
       contact:
         name: Name
