@@ -4,7 +4,7 @@
 <div class="panel borderless-top panel-default">
 	<div class="panel-body">
 		<%= form_for(@contact_msg, html: { :role => "form" }) do |f| %>
-			<%= render "errors" %>
+			<%= render partial: "common/errors", locals: {obj: @contact_msg, mdl: "#{Contact.model_name.human.downcase}"} %>
 			<div class="row">
 				<div class="col-sm-6 col-md-6">
 					<div class="form-group">

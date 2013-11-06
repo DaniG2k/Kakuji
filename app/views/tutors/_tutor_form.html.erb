@@ -1,5 +1,7 @@
 <%= form_for(@tutor, html: { :role => "form" }) do |f| %>
-	<%= render "errors" %>
+	
+	<%= render partial: "common/errors", locals: {obj: @tutor, mdl: "#{Tutor.model_name.human.downcase}"} %>
+	
 	<div class="row">
 		<div class="col-sm-6 col-md-6">
 			<div class="form-group">
