@@ -1,0 +1,6 @@
+en:
+  activemodel:
+    inquiry:
+      name: Name
+      email: E-mail
+      message: Message

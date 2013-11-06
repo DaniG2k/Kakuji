@@ -1,0 +1,6 @@
+ko:
+  activemodel:
+    inquiry:
+      name: 이름
+      email: 이메일
+      message: 메시지

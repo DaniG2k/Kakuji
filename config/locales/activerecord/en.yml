@@ -1,9 +1,4 @@
 en:
-  activemodel:
-    inquiry:
-      name: Name
-      email: E-mail
-      message: Message
   activerecord:
     models:
       user: User
