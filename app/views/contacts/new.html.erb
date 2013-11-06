@@ -1,0 +1,27 @@
+<% title t '.title' %>
+<h1><%= t '.title' %> <small><%= t '.subtitle' %></small></h1>
+
+<div class="panel borderless-top panel-default">
+	<div class="panel-body">
+		<%= form_for(@contact_msg, html: { :role => "form" }) do |f| %>
+			<%= render "errors" %>
+			<div class="row">
+				<div class="col-sm-6 col-md-6">
+					<div class="form-group">
+						<%= f.label :name %>
+						<%= f.text_field :name, class: "form-control" %>
+					</div>
+					<div class="form-group">
+						<%= f.label :email %>
+						<%= f.text_field :email, class: "form-control" %>
+					</div>
+					<div class="form-group">
+						<%= f.label :message %>
+						<%= f.text_area :message, class: "form-control" %>
+					</div>
+					<%= f.submit t('common.send'), class: "btn btn-success" %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

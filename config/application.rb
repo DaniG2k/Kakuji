@@ -26,6 +26,20 @@ module Kakuji
     # Use this for adding custom directories with classes and modules
     config.autoload_paths += %W(#{config.root}/lib)
     
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "yourdomain.dev",
+      :user_name            => "from@yourdomain.dev",
+      :password             => "Super-Secure-Password",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+    
+    config.action_mailer.default_url_options = {
+      :host => "yourdomain.dev"
+    }
+    
     # Configure Devise's layouts on a per-controller basis
     config.to_prepare do
       Devise::SessionsController.layout "simple"

@@ -2,6 +2,6 @@
 	<%= link_to t('list_tutors', scope: 'common'), tutors_path, class: current_page?(:controller => 'tutors', :action => 'index') ? "list-group-item active" : "list-group-item" %>
 	<%= link_to t('messages.index.title'), messages_path, class: current_page?(messages_path) ? "list-group-item active" : "list-group-item" %>
 	<%= link_to t('users.privacy.title'), privacy_path, class: current_page?(privacy_path) ? "list-group-item active" : "list-group-item" %>
-	<%= link_to t('inquiries.new.title'), new_inquiry_path, class: current_page?(new_inquiry_path) ? "list-group-item active" : "list-group-item"%>
+	<%= link_to t('contacts.new.title'), new_contact_path, class: current_page?(new_contact_path) ? "list-group-item active" : "list-group-item"%>
 	<a href="#" class="list-group-item">Help</a>
 </div>

@@ -1,7 +1,7 @@
 en:
   activemodel:
     attributes:
-      inquiry:
+      contact:
         name: Name
         email: E-mail
         message: Message

@@ -51,7 +51,7 @@ ko:
     show:
       title: 내 튜터 프로파일
       location_img: 튜터 위치
-  inquiries:
+  contacts:
     new:
       title: 문의
       subtitle: 여러분의 생각을 알려주세요

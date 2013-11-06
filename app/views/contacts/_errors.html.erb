@@ -1,0 +1,12 @@
+<% if @contact_msg.errors.any? %>
+<div class="alert alert-danger alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<%= flash[:error] %>	
+	<%= t('errors.template.header', model: Contact.model_name.human.downcase, count: @contact_msg.errors.count) %>
+	<ul>
+	<% @contact_msg.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+	</ul>
+</div>
+<% end %>
