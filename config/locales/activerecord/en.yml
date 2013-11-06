@@ -1,4 +1,9 @@
 en:
+  activemodel:
+    inquiry:
+      name: Name
+      email: E-mail
+      message: Message
   activerecord:
     models:
       user: User
@@ -47,7 +52,7 @@ en:
         body: Body
         sender: Sender
         recipient: Recipient
-        submitted: Submitted  
+        submitted: Submitted
   errors:
     educational_experiences_attributes:
       too_many: are more than necessary.
