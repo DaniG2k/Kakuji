@@ -55,7 +55,9 @@ ja:
     new:
       title: お問い合わせ
       subtitle: 貴方の感想をお知らせてください
-      send: 送信
+    form:
+      new:
+        send: 送信
   datetime:
     distance_in_words:
       ago: 前

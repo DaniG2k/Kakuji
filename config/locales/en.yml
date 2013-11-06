@@ -78,7 +78,9 @@ en:
     new:
       title: Inquiries
       subtitle: Please let us know your thoughts!
-      send: Send
+    form:
+      new:
+        send: Send
   datetime:
     distance_in_words:
       ago: ago
