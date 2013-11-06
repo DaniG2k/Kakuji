@@ -15,6 +15,7 @@ ja:
       title:  "%{website}について"
       description: "%{website}の明細と情報"
   common:
+    send: 送信
     list_tutors: チューター・一覧
     edit_profile: プロファイル編集
     my_tutor_profile: 私のチューター・プロファイル
@@ -29,7 +30,6 @@ ja:
       empty_inbox: 受信トレイにメッセージはありません。
     new:
       title: 新規メッセージ
-      send: 送信
       recipient: "%{user}さんへ"
     show:
       title: カンバセーション
@@ -55,9 +55,6 @@ ja:
     new:
       title: お問い合わせ
       subtitle: 貴方の感想をお知らせてください
-    form:
-      new:
-        send: 送信
   datetime:
     distance_in_words:
       ago: 前

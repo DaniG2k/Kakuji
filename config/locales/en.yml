@@ -38,21 +38,21 @@ en:
       title: "About %{website}"
       description: "Some information about %{website}"
   common:
-      list_tutors: List tutors
-      edit_profile: Edit profile
-      my_tutor_profile: My tutor profile
-      edit_tutor_profile: Edit tutor profile
-      become_a_tutor: Become a tutor
-      copyright: "%{website} © %{year_range}. All rights reserved."
-      search:
-        placeholder: Search
+    send: Send
+    list_tutors: List tutors
+    edit_profile: Edit profile
+    my_tutor_profile: My tutor profile
+    edit_tutor_profile: Edit tutor profile
+    become_a_tutor: Become a tutor
+    copyright: "%{website} © %{year_range}. All rights reserved."
+    search:
+      placeholder: Search
   messages:
     index:
       title: Inbox
       empty_inbox: Your inbox is currently empty. 
     new:
       title: New Message
-      send: Send
       recipient: "to %{user}"
     show:
       title: Conversation
@@ -78,9 +78,6 @@ en:
     new:
       title: Inquiries
       subtitle: Please let us know your thoughts!
-    form:
-      new:
-        send: Send
   datetime:
     distance_in_words:
       ago: ago

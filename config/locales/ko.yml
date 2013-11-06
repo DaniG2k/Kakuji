@@ -15,6 +15,7 @@ ko:
       title:  "%{website}에 대해"
       description: "%{website}의 명세와 정보"
   common:
+    send: 전송
     list_tutors: 튜터 목록
     edit_profile: 프로파일 편집
     my_tutor_profile: 내 튜터 프로파일
@@ -29,7 +30,6 @@ ko:
       empty_inbox: 받은 편지함에 메시지가 없습니다.
     new:
       title: 새 메시지
-      send: 전송
       recipient: "%{user}님 에게"
     show:
       title: 대화
@@ -55,9 +55,6 @@ ko:
     new:
       title: 문의
       subtitle: 여러분의 생각을 알려주세요
-    form:
-      new:
-        send: 전송
   datetime:
     distance_in_words:
       ago: 전
