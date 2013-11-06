@@ -19,9 +19,8 @@ Kakuji::Application.routes.draw do
     
     resources :messages, only: [:index, :show, :new, :create]
     
-    resources :contacts, only: [:new, :create] do
-      get 'thanks', :on => :collection
-    end
+    get '/contact', to: 'contact#new'
+    post '/contact', to: 'contact#create'
   end
   #match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   #match '', to: redirect("/#{I18n.default_locale}")

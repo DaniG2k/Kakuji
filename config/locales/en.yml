@@ -74,9 +74,9 @@ en:
     show:
       title: My tutor profile
       location_img: Tutor Location
-  contacts:
+  contact:
     new:
-      title: Inquiries
+      title: Contact
       subtitle: Please let us know your thoughts!
   datetime:
     distance_in_words:
