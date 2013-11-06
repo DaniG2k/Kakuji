@@ -51,9 +51,10 @@ ja:
     show:
       title: 私のチューター・プロフィール
       location_img: チューター位置
-  contact:
+  inquiries:
     new:
       title: お問い合わせ
+      subtitle: 貴方の感想をお知らせてください
       send: 送信
   datetime:
     distance_in_words:

@@ -51,9 +51,10 @@ ko:
     show:
       title: 내 튜터 프로파일
       location_img: 튜터 위치
-  contact:
+  inquiries:
     new:
       title: 문의
+      subtitle: 여러분의 의견을 알려주세요
       send: 문의 
   datetime:
     distance_in_words:
