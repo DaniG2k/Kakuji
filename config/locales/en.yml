@@ -78,6 +78,8 @@ en:
     new:
       title: Contact
       subtitle: Please let us know your thoughts!
+    thanks:
+      title: Thank you!
   datetime:
     distance_in_words:
       ago: ago

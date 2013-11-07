@@ -3,6 +3,6 @@ class ContactsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message # Needed for view?
-    mail(:from => @message.email)
+    mail(:from => @message.email, :subject => @message.subject)
   end
 end

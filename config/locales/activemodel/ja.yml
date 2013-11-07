@@ -6,4 +6,5 @@ ja:
       contact:
         name: お名前
         email: メール
-        message: メッセージ
+        subject: 件名
+        body: メッセージ

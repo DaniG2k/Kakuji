@@ -6,4 +6,5 @@ ko:
       contact:
         name: 이름
         email: 이메일
-        message: 메시지
+        subject: 제목
+        body: 메시지

@@ -55,6 +55,8 @@ ko:
     new:
       title: 문의
       subtitle: 여러분의 생각을 알려주세요
+    thanks:
+      titke: 감사합니다!
   datetime:
     distance_in_words:
       ago: 전

@@ -6,4 +6,5 @@ en:
       contact:
         name: Name
         email: E-mail
-        message: Message
+        subject: Subject
+        body: Message
