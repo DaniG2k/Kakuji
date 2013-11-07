@@ -27,16 +27,12 @@ module Kakuji
     config.autoload_paths += %W(#{config.root}/lib)
     
     config.action_mailer.smtp_settings = {
-      :address              => "box709.bluehost.com",
-      :port                 => 465,
-      :domain               => "asia-gazette.com",
-      :user_name            => "danielep@asia-gazette.com",
-      :authentication       => :login,
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "localhost.localdomain",
+      :user_name            => "byakugan.87@gmail.com",
+      :authentication       => :plain,
       :enable_starttls_auto => true
-    }
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = {
-      :host => "asia-gazette.com"
     }
     
     # Configure Devise's layouts on a per-controller basis
