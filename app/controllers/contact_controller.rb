@@ -4,7 +4,7 @@ class ContactController < ApplicationController
   end
   
   def create
-    @contact_msg = Contact.new(params[:contact])
+    @contact_msg = Contact.new params[:contact]
     if @contact_msg.valid?
       ContactsMailer.new_message(@contact_msg).deliver
       render 'thanks'

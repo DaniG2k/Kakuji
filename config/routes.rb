@@ -8,6 +8,9 @@ Kakuji::Application.routes.draw do
     get "about", to: "home#about"
     get 'privacy', to: 'users#privacy'
     
+    get '/contact', to: 'contact#new'
+    post '/contact', to: 'contact#create'
+    
     devise_for :users, controllers: {registrations: "registrations"}
     
     get "users/index"
@@ -18,9 +21,6 @@ Kakuji::Application.routes.draw do
     end
     
     resources :messages, only: [:index, :show, :new, :create]
-    
-    get '/contact', to: 'contact#new'
-    post '/contact', to: 'contact#create'
   end
   #match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   #match '', to: redirect("/#{I18n.default_locale}")
