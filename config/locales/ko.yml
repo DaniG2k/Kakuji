@@ -56,7 +56,8 @@ ko:
       title: 문의
       subtitle: 여러분의 생각을 알려주세요
     thanks:
-      titke: 감사합니다!
+      title: 감사합니다!
+      body: 당신 조회를 보내되며, 최대한 빨리 연락 드리겠습니다.
   datetime:
     distance_in_words:
       ago: 전

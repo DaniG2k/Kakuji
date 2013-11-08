@@ -80,6 +80,7 @@ en:
       subtitle: Please let us know your thoughts!
     thanks:
       title: Thank you!
+      body: Your inquiry has been sent and we'll be in touch as soon as possible.
   datetime:
     distance_in_words:
       ago: ago

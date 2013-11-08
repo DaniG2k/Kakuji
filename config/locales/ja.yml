@@ -57,6 +57,7 @@ ja:
       subtitle: 貴方の感想をお知らせてください
     thanks:
       title: ありがとうございました！
+      body: あなたの照会が送信されており、できるだけ早くご連絡いたします。
   datetime:
     distance_in_words:
       ago: 前
