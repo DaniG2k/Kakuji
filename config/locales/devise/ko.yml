@@ -3,6 +3,7 @@ ko:
     registrations:
       new:
         sign_up: "등록"
+        registered: "계정을 이미있으세요?"
       edit:
         update: "업데이트"
         unhappy: "불행 있습니까??"
@@ -10,6 +11,7 @@ ko:
     sessions:
       new:
         sign_in: "로그인"
+        not_registered: "계정이 없으세요?"
         remember: "메일 암호 저장"
       destroy:
         sign_out: "로그 아웃"

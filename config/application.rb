@@ -9,7 +9,7 @@ Bundler.require(:default, Rails.env)
 # Use a separate application.yml file to ensure
 # that passwords do not get put into version control.
 CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
-CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.merge!(CONFIG.fetch(Rails.env, {}))
 CONFIG.symbolize_keys!
 
 module Kakuji
@@ -41,7 +41,6 @@ module Kakuji
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
-    
     config.action_mailer.default_url_options = {:host => CONFIG[:host] }
     
     # Configure Devise's layouts on a per-controller basis

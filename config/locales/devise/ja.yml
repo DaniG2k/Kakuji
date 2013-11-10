@@ -3,6 +3,7 @@ ja:
     registrations:
       new:
         sign_up: "登録"
+        registered: "アカウントをすでにお持ちですか？"
       edit:
         update: "更新"
         unhappy: "不満ですか？？"
@@ -10,6 +11,7 @@ ja:
     sessions:
       new:
         sign_in: "ログイン"
+        not_registered: "アカウントを持っていませんか？"
         remember: "メール・パスワードの保存"
       destroy:
         sign_out: "ログアウト"
