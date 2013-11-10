@@ -44,7 +44,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
 gem 'bootstrap-sass-rails'
 gem 'jquery-turbolinks'
 gem 'rails-i18n'

@@ -6,6 +6,12 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+# Use a separate application.yml file to ensure
+# that passwords do not get put into version control.
+CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.symbolize_keys!
+
 module Kakuji
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -30,10 +36,13 @@ module Kakuji
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "localhost.localdomain",
-      :user_name            => "byakugan.87@gmail.com",
+      :user_name            => CONFIG[:mailer_username],
+      :password             => CONFIG[:mailer_password],
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
+    
+    config.action_mailer.default_url_options = {:host => CONFIG[:host] }
     
     # Configure Devise's layouts on a per-controller basis
     config.to_prepare do
