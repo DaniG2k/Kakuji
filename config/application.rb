@@ -9,8 +9,7 @@ Bundler.require(:default, Rails.env)
 # Use a separate application.yml file to ensure
 # that passwords do not get put into version control.
 CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
-CONFIG.merge!(CONFIG.fetch(Rails.env, {}))
-CONFIG.symbolize_keys!
+CONFIG.merge!(CONFIG.fetch(Rails.env, {})).symbolize_keys!
 
 module Kakuji
   class Application < Rails::Application
