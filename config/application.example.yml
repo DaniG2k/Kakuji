@@ -1,5 +1,5 @@
 mailer_username:  "email@gmail.com"
-mailer_password:   "secret"
+mailer_password:  "secret"
 secret_token: '401f949664ab912c892d229e1733d87dd40c74bf6b1f714eb6baf0158e484af35185091dd7b1d7a91a1b31045b32186b46f1cf789d182dda2cb9ef5ca9b500ff'
 development:
   host: "localhost:3000"
