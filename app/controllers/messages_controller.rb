@@ -44,6 +44,6 @@ class MessagesController < ApplicationController
     def catch_not_found
       yield
     rescue ActiveRecord::RecordNotFound
-      redirect_to tutors_path, flash: { :notice => t('recipient_not_found', scope: 'errors.messages') }
+      redirect_to tutors_path, flash: { notice: t('recipient_not_found', scope: 'errors.messages') }
     end
 end
