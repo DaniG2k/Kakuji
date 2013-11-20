@@ -33,6 +33,7 @@ ko:
       recipient: "%{user}님 에게"
     show:
       title: 대화
+      reply: 대답
   users:
     privacy:
       title: 개인 정보 보호 정책

@@ -6,26 +6,28 @@
 		
 		<% @conversation.each do |message| %>
 		<div class="clearfix">
-		<% if message.sender_id.eql?(current_user.id) %>
+			<% if message.sender_id.eql?(current_user.id) %>
 			<div class="pull-left">
 				<p class="text-success">
-					<%= User.find(message.sender_id).first_name %>
+					<strong><%= User.find(message.sender_id).first_name %></strong>
 				</p>
 			</div>
 			<div class="bubble me"><%= message.body %></div>
-		<% else %>
+			<% else %>
 			<div class="pull-right">
 				<p class="text-primary">
-					<%= User.find(message.sender_id).first_name %>
+					<strong><%= User.find(message.sender_id).first_name %></strong>
 				</p>
 			</div>
 			<div class="bubble you"><%= message.body %></div>
-		<% end %>
+			<% end %>
 		</div>
 		<p class="small text-muted text-center">
 			<%= "#{distance_of_time_in_words_to_now(message.created_at)} #{t(:ago, scope: 'datetime.distance_in_words')}" %>
 		</p>
 		<% end %>
-		
+		<%= link_to(new_message_path(:recipient_id => @reply_to_id), class: "btn btn-primary btn-sm") do %>
+	  	<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;<%= t '.reply' %>
+	 	<% end %>
 	</div>
 </div>

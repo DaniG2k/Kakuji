@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     sndr = message.sender_id
     rcpnt = message.recipient_id
     @conversation = Message.where('(sender_id = ? AND recipient_id = ?) OR (sender_id = ? AND recipient_id = ?)', sndr, rcpnt, rcpnt, sndr)
+    @reply_to_id = current_user.id.eql?(sndr) ? rcpnt : sndr
   end
   
   def new

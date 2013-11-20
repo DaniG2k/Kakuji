@@ -56,6 +56,7 @@ en:
       recipient: "to %{user}"
     show:
       title: Conversation
+      reply: Reply
   users:
     privacy:
       title: Privacy Policy
