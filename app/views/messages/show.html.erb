@@ -23,7 +23,7 @@
 		</p>
 		<% end %>
 		
-		<%= link_to(new_message_path(:recipient_id => @reply_to_id), class: "btn btn-primary btn-sm") do %>
+		<%= link_to(new_message_path(:recipient_id => @reply_to_user), class: "btn btn-primary btn-sm") do %>
 	  	<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;<%= t '.reply' %>
 	 	<% end %>
 	 	

@@ -12,12 +12,12 @@ class MessagesController < ApplicationController
     sender = message.sender_id
     recipient = message.recipient_id
     @conversation = Message.where('(sender_id = ? AND recipient_id = ?) OR (sender_id = ? AND recipient_id = ?)', sender, recipient, recipient, sender)
-    @reply_to_id = current_user.id.eql?(sender) ? recipient : sender
+    @reply_to_user = current_user.id.eql?(sender) ? recipient : sender
   end
   
   def new
-    @tutor = Tutor.find(params[:recipient_id]).user
-    if @tutor == current_user
+    @user = User.find params[:recipient_id]
+    if @user == current_user
       redirect_to tutors_path
     else
       @message = Message.new
@@ -25,10 +25,10 @@ class MessagesController < ApplicationController
   end
   
   def create
-    @tutor = Tutor.find(params[:recipient_id]).user
+    @user = User.find params[:recipient_id]
     @message = Message.new(message_params)
     @message.sender = current_user
-    @message.recipient = @tutor
+    @message.recipient = @user
 
     if @message.save
       redirect_to messages_path
