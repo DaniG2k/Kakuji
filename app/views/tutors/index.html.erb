@@ -30,7 +30,7 @@
 				<tr>
 					<td>
 						<strong>
-							<%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor) %>
+							<%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %>
 						</strong>
 					</td>
 					<td><%= tutor.rate %></td>

@@ -9,10 +9,10 @@ class MessagesController < ApplicationController
   
   def show
     message = Message.find(params[:id])
-    sndr = message.sender_id
-    rcpnt = message.recipient_id
-    @conversation = Message.where('(sender_id = ? AND recipient_id = ?) OR (sender_id = ? AND recipient_id = ?)', sndr, rcpnt, rcpnt, sndr)
-    @reply_to_id = current_user.id.eql?(sndr) ? rcpnt : sndr
+    sender = message.sender_id
+    recipient = message.recipient_id
+    @conversation = Message.where('(sender_id = ? AND recipient_id = ?) OR (sender_id = ? AND recipient_id = ?)', sender, recipient, recipient, sender)
+    @reply_to_id = current_user.id.eql?(sender) ? recipient : sender
   end
   
   def new
