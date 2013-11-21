@@ -17,7 +17,7 @@
 		  <% @messages.each do |message| %>
 		  <tr>
 		    <td><%= link_to(message.subject, message) %></td>
-		    <td><%= message.body %></td>
+		    <td><%= link_to(message.body, message) %></td>
 		    <td><%= User.find(message.sender_id).fullname %></td>
 		    <td><%= User.find(message.recipient_id).fullname %></td>
 		    <td><%= distance_of_time_in_words_to_now_with_ago(message.created_at) %></td>

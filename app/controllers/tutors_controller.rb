@@ -9,6 +9,14 @@ class TutorsController < ApplicationController
     @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(15)
   end
   
+  #def search
+    # TODO show users within a specified radius
+    # search for a tutor in a region:
+    #   Geocoder.coordinates 'Paris, France'
+    # return tutors matching criteria:
+    #   Tutor.near [51.5442136, -0.1768485], 20, :units => :km
+  #end
+  
   def new
     @tutor = current_user.build_tutor unless @tutor
     @tutor.educational_experiences.build

@@ -39,11 +39,7 @@ module ApplicationHelper
       if(from_time..from_time+60).cover?(Time.zone.now)
         distance_of_time_in_words_to_now(from_time, include_seconds_or_options)
       else
-        if locale == :ja
-          "#{distance_of_time_in_words_to_now(from_time, include_seconds_or_options)}#{ago}"
-        else
-          default_s
-        end
+        locale == :ja ? "#{distance_of_time_in_words_to_now(from_time, include_seconds_or_options)}#{ago}" : default_s
       end
     else
       default_s

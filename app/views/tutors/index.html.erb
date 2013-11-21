@@ -16,6 +16,7 @@
 		<div class="text-center">
 			<%= paginate @tutors %>
 		</div>
+		
 		<div class="panel panel-default">
 		  <div class="panel-heading">Panel heading</div>
 		  <table class="table table-hover table-striped table-bordered">
@@ -28,11 +29,7 @@
 				</tr>
 			  <% @tutors.each do |tutor| %>
 				<tr>
-					<td>
-						<strong>
-							<%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %>
-						</strong>
-					</td>
+					<td><strong><%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %></strong></td>
 					<td><%= tutor.rate %></td>
 					<td><%= tutor.country %></td>
 					<td><%= tutor.description %></td>
@@ -44,5 +41,6 @@
 				<% end %>
 		  </table>
 		</div>
+		
 	</div>
 </div>
