@@ -18,7 +18,7 @@ class TutorsController < ApplicationController
   #end
   
   def new
-    @tutor = current_user.build_tutor unless @tutor
+    @tutor ||= current_user.build_tutor
     @tutor.educational_experiences.build
     @tutor.languages.build
   end
