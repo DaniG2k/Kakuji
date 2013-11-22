@@ -1,8 +1,6 @@
 <% title t '.title' %>
 <h1><%= t '.title' %></h1>
 
-<%= render partial: "common/errors", locals: {obj: @tutor, mdl: "#{Tutor.model_name.human.downcase}"} %>
-
 <div class="panel borderless-top panel-default">
 	<div class="panel-body">
 		<% flash.each do |type, msg| %>
@@ -13,6 +11,7 @@
 				</div>
 			<% end %>
     <% end %>
+    
 		<div class="text-center">
 			<%= paginate @tutors %>
 		</div>
