@@ -24,6 +24,7 @@ ko:
     copyright: "%{website} © %{year_range}년. 판권 소유."
     search:
       placeholder: 사이트 검색
+    time_to_now_with_ago: "%{time} 전"
   messages:
     index:
       title: 받은 편지

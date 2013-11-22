@@ -47,6 +47,7 @@ en:
     copyright: "%{website} © %{year_range}. All rights reserved."
     search:
       placeholder: Search
+    time_to_now_with_ago: "%{time} ago"
   messages:
     index:
       title: Inbox

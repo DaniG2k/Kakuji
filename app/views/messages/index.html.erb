@@ -20,7 +20,7 @@
 		    <td><%= link_to(message.body, message) %></td>
 		    <td><%= User.find(message.sender_id).fullname %></td>
 		    <td><%= User.find(message.recipient_id).fullname %></td>
-		    <td><%= distance_of_time_in_words_to_now_with_ago(message.created_at) %></td>
+		    <td><%= t('time_to_now_with_ago', scope: 'common', time: distance_of_time_in_words_to_now(message.created_at)) %></td>
 		  </tr>
 		  <% end %>
 		</table>

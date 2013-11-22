@@ -24,6 +24,7 @@ ja:
     copyright: "%{website} ©　%{year_range}年。 無断複写·転載を禁じます。"
     search:
       placeholder: サイト内検索
+    time_to_now_with_ago: "%{time}前"
   messages:
     index:
       title: 受信トレイ
