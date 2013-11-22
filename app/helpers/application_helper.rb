@@ -12,13 +12,14 @@ module ApplicationHelper
   
   def table_sort(column, title = nil)
     title ||= column.titleize
-    css_class = column == sort_column ? "current #{sort_direction}" : nil
+    # Use this for adding additional stylesheets
+    #css_class = column == sort_column ? "current #{sort_direction}" : nil
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
-    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
+    #link_to title, {:sort => column, :direction => direction}, {:class => css_class}
     # CSS class needs to be defined for arrowup and arrowdown.
     # Check out: http://railscasts.com/episodes/228-sortable-table-columns
     # The following should work with Twitter Bootstrap
-    # link_to "#{title} <i class='#{direction == "desc" ? "icon-chevron-down" : "icon-chevron-up"}'></i>".html_safe, {:sort => column, :direction => direction}, {:class => css_class}
+    link_to "#{title} <span class='#{direction == "asc" ? "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down"}'></span>".html_safe, {:sort => column, :direction => direction}#, {:class => css_class}
   end
   
   def link_to_add_fields(name, f, association)
