@@ -18,8 +18,8 @@ class Tutor < ActiveRecord::Base
   validates_presence_of :address, message: I18n.t('errors.messages.not_found')
   
   geocoded_by :address do |obj, results|
-    #TODO fix this!!
-    binding.pry
+    #TODO make sure this works for multiple result sets
+    # Note: the address data is getting parsed by parse_geolocation in tutors controller.
     if geo = results.first
       obj.latitude = geo.latitude
       obj.longitude = geo.longitude
