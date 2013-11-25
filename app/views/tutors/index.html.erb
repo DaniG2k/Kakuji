@@ -20,17 +20,17 @@
 		  <div class="panel-heading">Panel heading</div>
 		  <table class="table table-hover table-striped table-bordered">
 		  	<tr>
-					<th><%= t('.tutor_name') %></th>
-					<th><%= table_sort('rate', t(:rate, scope: 'activerecord.attributes.tutor') ) %></th>
-					<th><%= table_sort('country', t(:country, scope: 'activerecord.attributes.tutor') ) %></th>
-					<th><%= t(:description, scope: 'activerecord.attributes.tutor') %></th>
-					<th>Details</th>
+					<th><small><%= t('.tutor_name') %></small></th>
+					<th><small><%= table_sort('rate', t(:rate, scope: 'activerecord.attributes.tutor') ) %></small></th>
+					<th><small><%= table_sort('country', t(:country, scope: 'activerecord.attributes.tutor') ) %></small></th>
+					<th><small><%= t(:description, scope: 'activerecord.attributes.tutor') %></small></th>
+					<th><small>Details</small></th>
 				</tr>
 			  <% @tutors.each do |tutor| %>
 				<tr>
 					<td><strong><%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %></strong></td>
-					<td><%= tutor.rate %></td>
-					<td><%= tutor.country %></td>
+					<td><small><%= tutor.rate %></small></td>
+					<td><small><%= tutor.country %></small></td>
 					<td><%= tutor.description %></td>
 					<td class="text-center">
 						<%= link_to t('.view_tutor_button'), "#tModal#{tutor.id}", "data-toggle" => "modal", :class => "btn btn-success btn-xs" %>

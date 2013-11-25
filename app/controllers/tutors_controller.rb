@@ -1,12 +1,12 @@
 class TutorsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_tutor, except: :create
-  before_action :parse_geolocation, only: :update
+  before_action :parse_geolocation, only: [:create, :update]
   helper_method :sort_column, :sort_direction
   
   def index
     base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
-    @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(15)
+    @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(10)
   end
   
   #def search
