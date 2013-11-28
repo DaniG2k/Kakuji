@@ -18,7 +18,6 @@ module ApplicationHelper
     #link_to title, {:sort => column, :direction => direction}, {:class => css_class}
     # CSS class needs to be defined for arrowup and arrowdown.
     # Check out: http://railscasts.com/episodes/228-sortable-table-columns
-    # The following should work with Twitter Bootstrap
     link_to "#{title} <span class='#{direction == "asc" ? "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down"}'></span>".html_safe, {:sort => column, :direction => direction}#, {:class => css_class}
   end
   

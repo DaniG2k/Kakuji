@@ -28,18 +28,21 @@
 				</tr>
 			  <% @tutors.each do |tutor| %>
 				<tr>
-					<td><strong><%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %></strong></td>
+					<td><small><strong><%= link_to tutor.user.fullname, new_message_path(:recipient_id => tutor.user) %></strong></small></td>
 					<td><small><%= tutor.rate %></small></td>
 					<td><small><%= tutor.country %></small></td>
-					<td><%= tutor.description %></td>
+					<td><small><%= tutor.description %></small></td>
 					<td class="text-center">
 						<%= link_to t('.view_tutor_button'), "#tModal#{tutor.id}", "data-toggle" => "modal", :class => "btn btn-success btn-xs" %>
 					</td>
 				</tr>
-				<%= render partial: 'modal', locals: {:tutor => tutor} %>
 				<% end %>
 		  </table>
 		</div>
-		
+		<%= render 'google_map' %>
 	</div>
 </div>
+
+<% @tutors.each do |tutor| %>
+	<%= render partial: 'modal', locals: {:tutor => tutor} %>
+<% end %>
