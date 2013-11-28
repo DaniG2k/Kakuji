@@ -7,6 +7,7 @@ class TutorsController < ApplicationController
   def index
     base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
     @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(10)
+    @tutors_gmaps = @tutors.reject {|t| t.latitude.nil? || t.longitude.nil?}.map {|t| [t.user.fullname, t.latitude, t.longitude] }
   end
   
   #def search

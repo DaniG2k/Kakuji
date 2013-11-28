@@ -39,7 +39,7 @@
 				<% end %>
 		  </table>
 		</div>
-		<%= render 'google_map' %>
+		<%= render partial: 'google_map', locals: {tutors_gmaps: @tutors_gmaps} %>
 	</div>
 </div>
 
