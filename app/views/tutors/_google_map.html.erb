@@ -2,17 +2,11 @@
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCOD4-oyL910CcrjP9k222OdxsgdFpSj1E&sensor=false&libraries=drawing" %>
 <script type="text/javascript">
 	function initialize() {
-	  var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-	  
-	  var mapOptions = {
-	    zoom: 4,
-	    center: myLatlng
-	  }
-	  
-	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		var tutorLocations = <%= raw(tutors_gmaps) %>;
 		var bounds = new google.maps.LatLngBounds();
 		var infowindow = new google.maps.InfoWindow();
+		var mapOptions = { zoom: 4 }
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		var tutorLocations = <%= raw(tutors_gmaps) %>;
 		
 		for (var i = 0; i < tutorLocations.length; i++) {
 			var tutor = tutorLocations[i];
