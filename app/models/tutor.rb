@@ -62,4 +62,12 @@ class Tutor < ActiveRecord::Base
     #def to_param
     #  "#{user.first_name}".parameterize
     #end
+    
+    def self.search(query)
+      if query
+        where('country LIKE ? OR city LIKE ? or postalcode LIKE ? or street LIKE ?', query, query, query, query)
+      else
+        scoped
+      end
+    end
 end

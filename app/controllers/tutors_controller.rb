@@ -5,7 +5,11 @@ class TutorsController < ApplicationController
   helper_method :sort_column, :sort_direction
   
   def index
-    base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
+    if params[:search]
+      base = Tutor.search(params[:search])
+    else
+      base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
+    end
     @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(10)
     # Populate the lat/long coordinates for Google Maps
     @tutors_gmaps = @tutors.reject {|t| t.latitude.nil? || t.longitude.nil?}.map {|t| [t.user.fullname, t.latitude, t.longitude] }
