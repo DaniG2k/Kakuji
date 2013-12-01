@@ -5,9 +5,8 @@ class TutorsController < ApplicationController
   helper_method :sort_column, :sort_direction
   
   def index
-    if params[:search].present?
-      # Search method defined in Tutor model
-      base = Tutor.search(params[:search])
+    if params[:search].present? # present? method required
+      base = Tutor.near(params[:search])
     else
       base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all
     end
@@ -15,15 +14,7 @@ class TutorsController < ApplicationController
     # Populate the lat/long coordinates for Google Maps
     @tutors_gmaps = @tutors.reject {|t| t.latitude.nil? || t.longitude.nil?}.map {|t| [t.user.fullname, t.latitude, t.longitude] }
   end
-  
-  #def search
-    # TODO show users within a specified radius
-    # search for a tutor in a region:
-    #   Geocoder.coordinates 'Paris, France'
-    # return tutors matching criteria:
-    #   Tutor.near [51.5442136, -0.1768485], 20, :units => :km
-  #end
-  
+
   def new
     @tutor ||= current_user.build_tutor
     @tutor.educational_experiences.build

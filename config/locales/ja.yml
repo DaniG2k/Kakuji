@@ -23,6 +23,7 @@ ja:
     become_a_tutor: チューターになる
     copyright: "%{website} ©　%{year_range}年。 無断複写·転載を禁じます。"
     search:
+      search: 検索
       placeholder: サイト内検索
     time_to_now_with_ago: "%{time}前"
   messages:

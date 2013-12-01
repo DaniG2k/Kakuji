@@ -46,6 +46,7 @@ en:
     become_a_tutor: Become a tutor
     copyright: "%{website} © %{year_range}. All rights reserved."
     search:
+      search: Search
       placeholder: Search
     time_to_now_with_ago: "%{time} ago"
   messages:

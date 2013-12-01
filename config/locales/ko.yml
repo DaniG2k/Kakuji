@@ -23,6 +23,7 @@ ko:
     become_a_tutor: 튜터된다
     copyright: "%{website} © %{year_range}년. 판권 소유."
     search:
+      search: 검색
       placeholder: 사이트 검색
     time_to_now_with_ago: "%{time} 전"
   messages:
