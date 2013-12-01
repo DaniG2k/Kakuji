@@ -5,7 +5,8 @@ class TutorsController < ApplicationController
   helper_method :sort_column, :sort_direction
   
   def index
-    if params[:search]
+    if params[:search].present?
+      # Search method defined in Tutor model
       base = Tutor.search(params[:search])
     else
       base = params[:tag] ? Tutor.tagged_with(params[:tag]) : Tutor.all

@@ -64,10 +64,6 @@ class Tutor < ActiveRecord::Base
     #end
     
     def self.search(query)
-      if query
-        where('country LIKE ? OR city LIKE ? or postalcode LIKE ? or street LIKE ?', query, query, query, query)
-      else
-        scoped
-      end
+      where('country LIKE ? OR city LIKE ? or postalcode LIKE ? or street LIKE ?', query, query, query, query)
     end
 end
