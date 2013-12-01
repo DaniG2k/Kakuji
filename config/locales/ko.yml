@@ -44,6 +44,7 @@ ko:
       title: 튜터 목록
       tutor_name: 튜터의 이름
       view_tutor_button: 디테일
+      location_search: 위치 검색
     modal:
       contact: 연락
       close: 닫기

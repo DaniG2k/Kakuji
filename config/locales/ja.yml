@@ -44,6 +44,7 @@ ja:
       title: チューター・一覧
       tutor_name: チューター氏名
       view_tutor_button: 表示
+      location_search: 場所から検索
     modal:
       contact: 連絡
       close: 閉じる

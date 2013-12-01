@@ -67,6 +67,7 @@ en:
       title: Tutors
       tutor_name: Tutor Name
       view_tutor_button: View
+      location_search: Location search
     modal:
       contact: Contact
       close: Close
