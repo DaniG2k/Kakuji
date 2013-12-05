@@ -14,12 +14,12 @@
     
     <div class="text-center">
     	<%= form_tag tutors_path, :method => 'get' do %>
-	    	<%= hidden_field_tag :direction, params[:direction] %>
-	    	<%= hidden_field_tag :sort, params[:sort] %>
-	    	<%= text_field_tag :search, params[:search], :placeholder => t('.location_search') %>
-	    	<%= submit_tag t(:search, scope: 'common.search'), :name => nil %>
-   		<% end %>
-   		
+				<%= hidden_field_tag :direction, params[:direction] %>
+				<%= hidden_field_tag :sort, params[:sort] %>
+				<%= text_field_tag :search, params[:search], :placeholder => t('.location_search') %>
+				<%= submit_tag t(:search, scope: 'common.search'), :name => nil %>
+			<% end %>
+    	   		
 			<%= paginate @tutors %>
 		</div>
 		
@@ -46,7 +46,7 @@
 				<% end %>
 		  </table>
 		</div>
-		<%= render partial: 'google_map', locals: {tutors_gmaps: @tutors_gmaps} %>
+		<%= render partial: 'google_map', locals: {tutor_coords: @tutor_coords} %>
 	</div>
 </div>
 

@@ -12,7 +12,7 @@ class TutorsController < ApplicationController
     end
     @tutors = base.includes(:user).order("#{sort_column} #{sort_direction}").page(params[:page]).per(10)
     # Populate the lat/long coordinates for Google Maps
-    @tutors_gmaps = @tutors.reject {|t| t.latitude.nil? || t.longitude.nil?}.map {|t| [t.user.fullname, t.latitude, t.longitude] }
+    @tutor_coords = @tutors.reject {|t| t.latitude.nil? || t.longitude.nil?}.map {|t| [t.user.fullname, t.latitude, t.longitude] }
   end
 
   def new

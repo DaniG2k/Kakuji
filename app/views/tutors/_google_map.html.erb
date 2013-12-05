@@ -2,7 +2,7 @@
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{CONFIG[:gmaps_key]}&sensor=false&libraries=drawing" %>
 <script type="text/javascript">
 	function initialize() {
-		var tutorLocations = <%= raw(tutors_gmaps) %>;
+		var tutorLocations = <%= raw(tutor_coords) %>;
 		if (tutorLocations.length > 0){
 			var bounds = new google.maps.LatLngBounds();
 			var infowindow = new google.maps.InfoWindow();
