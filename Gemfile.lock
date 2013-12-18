@@ -200,7 +200,7 @@ DEPENDENCIES
   country_select
   devise (= 3.0.0)
   devise-i18n
-  factory_girl_rails (~> 4.0)
+  factory_girl_rails
   faker
   geocoder
   jbuilder (~> 1.2)

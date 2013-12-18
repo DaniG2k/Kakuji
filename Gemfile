@@ -60,7 +60,9 @@ gem 'acts-as-taggable-on'
 #gem 'i18n_country_select'
 #gem 'i18n-timezones'
 
-gem 'brakeman', group: :development
-gem 'pry', group: :development
-gem 'faker', group: :development
-gem "factory_girl_rails", "~> 4.0"
+group :development do
+  gem 'brakeman'
+  gem 'pry'
+  gem 'faker'
+  gem "factory_girl_rails"
+end
