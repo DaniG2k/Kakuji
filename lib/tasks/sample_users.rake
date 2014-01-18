@@ -8,10 +8,11 @@ namespace :db do
                 password: 'tecredoo0',
                 password_confirmation: 'tecredoo0',
                 is_tutor: true)
+                
     (1..100).each_with_index do |n, idx|
       first_name = Faker::Name.first_name
       last_name = Faker::Name.last_name
-      email = "example-#{n}@railstutorial.org"
+      email = "user-#{n}@gmail.com"
       password = 'foobar000'
       gender = ['male', 'female'].sample
       tutor = (idx < 50) ? true : false
