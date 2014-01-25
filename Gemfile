@@ -47,7 +47,7 @@ end
 gem 'bootstrap-sass-rails'
 gem 'jquery-turbolinks'
 gem 'rails-i18n'
-gem 'devise', '3.0.0'
+gem 'devise'
 gem 'devise-i18n'
 gem 'country_select'
 gem 'kaminari'
